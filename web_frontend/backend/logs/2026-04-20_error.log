@@ -1,0 +1,48 @@
+2026-04-20 09:57:37.496 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-20 09:57:37.614 | ERROR    | module_device.service.scu_version_service:init_web_version:34 - SCU version initialization failed: (sqlite3.OperationalError) no such table: pcs_soft_version
+[SQL: SELECT pcs_soft_version.id AS pcs_soft_version_id, pcs_soft_version.name AS pcs_soft_version_name, pcs_soft_version.cpld_version AS pcs_soft_version_cpld_version, pcs_soft_version.dsp_cpu1_version AS pcs_soft_version_dsp_cpu1_version, pcs_soft_version.dsp_cpu2_version AS pcs_soft_version_dsp_cpu2_version, pcs_soft_version.pcs_version AS pcs_soft_version_pcs_version 
+FROM pcs_soft_version 
+WHERE pcs_soft_version.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (18, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-20 09:57:37.616 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-20 10:00:30.298 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-04-20 10:00:30.386 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 10:00:30.655 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-20 10:47:15.245 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 10:47:15.486 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-20 11:34:46.456 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 11:34:46.669 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-20 11:36:19.719 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 11:36:19.824 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-20 11:38:28.508 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-20 11:38:28.529 | ERROR    | module_device.service.scu_version_service:init_web_version:34 - SCU version initialization failed: (sqlite3.OperationalError) no such table: pcs_soft_version
+[SQL: SELECT pcs_soft_version.id AS pcs_soft_version_id, pcs_soft_version.name AS pcs_soft_version_name, pcs_soft_version.cpld_version AS pcs_soft_version_cpld_version, pcs_soft_version.dsp_cpu1_version AS pcs_soft_version_dsp_cpu1_version, pcs_soft_version.dsp_cpu2_version AS pcs_soft_version_dsp_cpu2_version, pcs_soft_version.pcs_version AS pcs_soft_version_pcs_version 
+FROM pcs_soft_version 
+WHERE pcs_soft_version.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (18, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-20 11:38:28.529 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-20 11:42:41.279 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 11:42:41.656 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-20 12:54:16.124 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-04-20 12:54:16.153 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 12:54:16.173 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-20 12:57:34.054 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 12:57:34.115 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-20 12:58:08.482 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-04-20 12:58:22.622 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 12:58:22.654 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-20 12:58:22.787 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-04-20 12:58:37.101 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-04-20 12:58:58.312 | INFO     | module_device.controller.template_controller:add_system_template:75 - Added successfully
+2026-04-20 12:58:58.350 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-04-20 13:21:44.470 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-04-20 16:20:34.170 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 16:20:34.197 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-20 16:20:40.814 | INFO     | module_admin.controller.login_controller:logout:129 - 退出成功
+2026-04-20 16:20:42.364 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-04-20 16:20:42.407 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-20 16:20:42.432 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功

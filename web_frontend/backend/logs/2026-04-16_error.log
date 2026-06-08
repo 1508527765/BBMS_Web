@@ -1,0 +1,10 @@
+2026-04-16 16:45:49.645 | INFO     | server:lifespan:35 - SCU-FastAPI Starting...
+2026-04-16 16:45:49.702 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-04-16 16:45:49.702 | INFO     | server:lifespan:39 - SCU-FastAPI Started successfully
+2026-04-16 16:49:50.616 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-04-16 16:49:50.689 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-16 16:49:50.734 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-16 16:50:23.320 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-04-16 16:50:43.452 | INFO     | module_device.controller.port_controller:get_port_list:40 - 获取成功
+2026-04-16 16:50:45.116 | INFO     | module_device.controller.port_controller:get_port_list:40 - 获取成功
+2026-04-16 16:50:48.234 | INFO     | module_admin.controller.server_controller:get_monitor_server_info:19 - 获取成功

@@ -1,0 +1,59 @@
+2026-03-20 10:49:46.947 | INFO     | server:lifespan:35 - SCU-FastAPI Starting...
+2026-03-20 10:49:46.971 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-03-20 10:49:46.971 | INFO     | server:lifespan:39 - SCU-FastAPI Started successfully
+2026-03-20 20:14:27.832 | INFO     | server:lifespan:35 - SCU-FastAPI Starting...
+2026-03-20 20:14:27.849 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-03-20 20:14:27.849 | INFO     | server:lifespan:39 - SCU-FastAPI Started successfully
+2026-03-20 20:14:44.754 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-03-20 20:14:44.847 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-20 20:14:44.887 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-20 20:17:48.620 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-20 20:17:48.641 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-20 20:23:03.686 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-20 20:23:03.722 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-20 20:23:08.325 | INFO     | module_admin.controller.login_controller:logout:129 - 退出成功
+2026-03-20 20:23:09.599 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-03-20 20:23:09.644 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-20 20:23:09.997 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-20 20:23:12.563 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-20 20:23:12.595 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-20 20:32:32.500 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-20 20:32:32.520 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-23 13:56:53.383 | WARNING  | module_admin.service.login_service:get_current_user:225 - 用户token已失效，请重新登录
+2026-03-23 13:56:53.394 | INFO     | module_admin.controller.login_controller:logout:129 - 退出成功
+2026-03-23 13:56:55.368 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-03-23 13:56:55.404 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-23 13:56:55.732 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-23 14:02:29.488 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-03-23 14:04:16.316 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-03-23 14:04:42.956 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-23 14:04:42.979 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-23 14:04:43.646 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-03-23 14:05:06.218 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-03-23 14:05:09.129 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-03-23 14:05:52.518 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-03-23 14:06:15.641 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-23 14:06:15.665 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-24 09:59:37.950 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-03-24 09:59:38.147 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-24 09:59:38.296 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-25 11:11:12.436 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-03-25 11:11:12.468 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-25 11:11:12.488 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-25 11:11:46.089 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-25 11:11:46.200 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-26 10:24:31.762 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-03-26 10:38:36.590 | INFO     | module_device.controller.template_controller:get_template_all:59 - 获取成功
+2026-03-26 10:38:43.361 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-26 10:38:43.581 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-26 10:38:46.266 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-26 10:38:46.301 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-26 10:39:03.565 | INFO     | module_device.controller.template_controller:get_template_all:59 - 获取成功
+2026-03-26 11:12:51.436 | INFO     | module_admin.controller.login_controller:logout:129 - 退出成功
+2026-03-26 11:12:53.545 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-03-26 11:12:53.584 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-26 11:12:53.606 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-26 11:13:15.047 | INFO     | module_admin.controller.login_controller:logout:129 - 退出成功
+2026-03-26 11:13:22.958 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-03-26 11:13:23.168 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-26 11:13:23.300 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功

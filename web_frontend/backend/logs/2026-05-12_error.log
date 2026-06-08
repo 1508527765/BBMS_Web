@@ -1,0 +1,88 @@
+2026-05-12 10:26:21.806 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-12 10:26:21.812 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-12 10:32:11.846 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-12 10:32:11.861 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-12 10:35:47.821 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 10:35:47.963 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 10:35:49.119 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:36:43.551 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 10:36:43.713 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 10:36:44.025 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:36:46.596 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:47:33.446 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 10:47:33.574 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 10:47:34.812 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:55:31.140 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:55:31.738 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 11:08:28.179 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 11:08:28.493 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 11:08:29.620 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 11:09:18.576 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 11:09:18.688 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 11:09:19.272 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 12:00:24.251 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 12:00:24.588 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 12:00:25.972 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 12:04:14.873 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 12:04:28.561 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 12:04:44.468 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 12:04:44.598 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 12:04:46.121 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:16:14.935 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 13:16:15.115 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 13:16:16.229 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:36:22.090 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 13:36:22.221 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 13:36:22.778 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:38:58.388 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:39:12.023 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:39:43.106 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 13:39:43.285 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 13:39:44.634 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:40:22.365 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 13:40:22.476 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 13:40:22.997 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:48:28.884 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 13:48:29.009 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 13:48:30.380 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:51:07.477 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:51:20.282 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:51:37.156 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 13:51:37.311 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 13:51:38.976 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:56:04.863 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 13:56:05.381 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 13:56:05.523 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 13:56:06.608 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 14:00:51.404 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 14:00:51.523 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 14:00:52.738 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 14:04:16.225 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 14:04:16.376 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 14:04:16.931 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 14:21:23.538 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-12 14:21:23.543 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-12 17:05:03.105 | INFO     | server:lifespan:41 - SCU-FastAPI Starting...
+2026-05-12 17:05:03.121 | INFO     | server:lifespan:51 - SCU-FastAPI Started successfully
+2026-05-12 17:08:36.189 | WARNING  | module_admin.service.login_service:get_current_user:231 - 用户token已失效，请重新登录
+2026-05-12 17:08:37.851 | INFO     | module_admin.controller.login_controller:logout:134 - 退出成功
+2026-05-12 17:12:42.187 | WARNING  | module_admin.service.login_service:get_current_user:231 - 用户token已失效，请重新登录
+2026-05-12 17:12:42.480 | INFO     | module_admin.controller.login_controller:logout:134 - 退出成功
+2026-05-12 17:12:52.573 | INFO     | module_admin.controller.login_controller:login:58 - 登录成功
+2026-05-12 17:12:52.827 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 17:12:53.055 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 17:12:54.935 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 17:13:02.751 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 17:13:02.915 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 17:13:03.287 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 17:13:05.502 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 17:13:05.835 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 17:13:05.974 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 17:13:06.329 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 17:13:08.325 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-13 09:03:12.924 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-13 09:03:13.148 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-13 09:03:13.682 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-13 09:15:23.641 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-13 09:15:23.869 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-13 09:15:24.449 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功

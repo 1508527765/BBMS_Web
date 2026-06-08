@@ -1,0 +1,154 @@
+2026-05-18 10:15:05.742 | INFO     | server:lifespan:41 - SCU-FastAPI Starting...
+2026-05-18 10:15:05.748 | INFO     | server:lifespan:51 - SCU-FastAPI Started successfully
+2026-05-18 10:18:05.265 | WARNING  | module_admin.service.login_service:get_current_user:231 - 用户token已失效，请重新登录
+2026-05-18 10:18:05.460 | INFO     | module_admin.controller.login_controller:logout:134 - 退出成功
+2026-05-18 10:19:07.196 | INFO     | module_admin.controller.login_controller:login:58 - 登录成功
+2026-05-18 10:19:07.456 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 10:19:07.603 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 10:19:08.648 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 10:19:12.313 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 10:34:28.148 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 10:34:37.390 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 10:34:43.191 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 11:17:50.582 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 11:17:53.493 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 11:17:56.920 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 14:04:48.123 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:04:51.286 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:04:54.714 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 14:04:54.856 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 14:04:56.010 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:14:24.997 | INFO     | server:lifespan:41 - SCU-FastAPI Starting...
+2026-05-18 14:14:25.002 | INFO     | server:lifespan:51 - SCU-FastAPI Started successfully
+2026-05-18 14:20:47.371 | INFO     | server:lifespan:41 - SCU-FastAPI Starting...
+2026-05-18 14:20:47.377 | INFO     | server:lifespan:51 - SCU-FastAPI Started successfully
+2026-05-18 14:24:16.828 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 14:24:17.118 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 14:24:18.143 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:24:21.899 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:28:12.080 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 14:28:16.634 | ERROR    | exceptions.handle:service_exception_handler:51 - Device RBMS has been added to device topology and cannot be deleted
+2026-05-18 14:28:21.264 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 14:28:21.324 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:28:26.367 | INFO     | module_device.controller.topology_controller:delete_topology:51 - Deleted successfully
+2026-05-18 14:28:26.438 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 14:28:26.497 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:28:28.592 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:28:30.152 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 14:28:35.128 | INFO     | module_device.controller.device_controller:delete_system_device:107 - Delete successful
+2026-05-18 14:28:35.201 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 14:28:37.140 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:28:38.617 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:33:47.635 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 14:42:06.605 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 14:42:13.227 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 14:42:13.998 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 14:49:13.113 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 14:49:13.299 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 14:49:14.503 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 14:49:19.697 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:49:21.953 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 14:49:27.185 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 14:54:55.819 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 14:54:56.099 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 14:54:57.587 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 14:55:00.058 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 14:55:02.711 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 14:55:14.335 | INFO     | module_device.controller.template_controller:get_template_all:59 - 获取成功
+2026-05-18 14:55:17.454 | INFO     | module_device.controller.template_controller:get_template_all:59 - 获取成功
+2026-05-18 14:55:19.631 | INFO     | module_device.controller.template_controller:get_template_all:59 - 获取成功
+2026-05-18 14:55:24.681 | INFO     | module_device.controller.template_controller:get_template_all:59 - 获取成功
+2026-05-18 15:31:40.027 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 15:31:40.244 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 15:31:40.751 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 15:31:45.159 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 15:31:58.271 | INFO     | module_device.controller.template_controller:edit_system_template:91 - Updated successfully
+2026-05-18 15:31:58.343 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 15:32:02.249 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 15:32:02.403 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 15:32:02.860 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 15:32:08.530 | INFO     | module_device.controller.template_controller:edit_system_template:91 - Updated successfully
+2026-05-18 15:32:08.625 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 15:34:01.958 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 15:35:26.951 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 15:35:38.670 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-18 15:36:36.663 | INFO     | server:lifespan:41 - SCU-FastAPI Starting...
+2026-05-18 15:36:36.669 | INFO     | server:lifespan:51 - SCU-FastAPI Started successfully
+2026-05-18 15:36:39.986 | INFO     | module_device.controller.template_controller:get_template_list:39 - 获取成功
+2026-05-18 15:37:06.493 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 15:37:06.645 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 15:37:07.873 | INFO     | module_device.controller.template_controller:get_template_list:39 - 获取成功
+2026-05-18 16:06:45.230 | INFO     | module_device.controller.template_controller:export_template_list:181 - 导出成功
+2026-05-18 16:07:24.771 | INFO     | module_device.controller.device_controller:export_device_list:187 - 导出成功
+2026-05-18 16:08:32.055 | INFO     | server:lifespan:41 - SCU-FastAPI Starting...
+2026-05-18 16:08:32.060 | INFO     | server:lifespan:51 - SCU-FastAPI Started successfully
+2026-05-18 16:08:45.581 | INFO     | module_device.controller.template_controller:export_template_list:181 - 导出成功
+2026-05-18 16:57:43.195 | INFO     | server:lifespan:41 - SCU-FastAPI Starting...
+2026-05-18 16:57:43.199 | INFO     | server:lifespan:51 - SCU-FastAPI Started successfully
+2026-05-18 17:06:58.284 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 17:06:58.637 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 17:06:59.321 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 17:07:01.383 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 17:07:01.471 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 17:07:08.241 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 17:10:57.594 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 17:10:57.833 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 17:10:59.460 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 17:11:05.343 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 17:11:09.860 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 17:11:10.568 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 17:11:11.018 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-18 17:12:42.679 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-18 17:36:09.660 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-18 17:36:09.909 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-18 17:36:10.422 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-19 09:00:21.441 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-19 09:00:21.693 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-19 09:00:22.241 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-19 09:00:27.068 | INFO     | module_device.controller.template_controller:get_template_list:39 - 获取成功
+2026-05-19 09:07:03.876 | INFO     | module_device.controller.template_controller:add_system_template:78 - Added successfully
+2026-05-19 09:07:03.962 | INFO     | module_device.controller.template_controller:get_template_list:39 - 获取成功
+2026-05-19 09:07:27.214 | INFO     | module_device.controller.template_controller:batch_import_point:138 - Import successful
+2026-05-19 09:56:28.077 | INFO     | module_device.controller.template_controller:add_system_template:78 - Added successfully
+2026-05-19 09:56:28.149 | INFO     | module_device.controller.template_controller:get_template_list:39 - 获取成功
+2026-05-19 09:56:47.902 | INFO     | module_device.controller.template_controller:batch_import_point:138 - Import successful
+2026-05-19 09:58:55.753 | INFO     | module_device.controller.template_controller:batch_import_point:138 - Import successful
+2026-05-19 10:19:32.381 | INFO     | module_device.controller.template_controller:export_template_list:181 - 导出成功
+2026-05-19 10:20:25.534 | INFO     | module_device.controller.template_controller:export_template_list:181 - 导出成功
+2026-05-19 10:22:32.983 | INFO     | module_device.controller.template_controller:add_system_template:78 - Added successfully
+2026-05-19 10:22:33.125 | INFO     | module_device.controller.template_controller:get_template_list:39 - 获取成功
+2026-05-19 10:22:54.332 | INFO     | module_device.controller.template_controller:batch_import_point:138 - Import successful
+2026-05-19 10:38:14.057 | INFO     | module_device.controller.template_controller:add_system_template:78 - Added successfully
+2026-05-19 10:38:14.179 | INFO     | module_device.controller.template_controller:get_template_list:39 - 获取成功
+2026-05-19 10:38:35.335 | INFO     | module_device.controller.template_controller:batch_import_point:138 - Import successful
+2026-05-19 11:27:00.754 | INFO     | module_device.controller.template_controller:batch_import_point:138 - Import successful
+2026-05-19 11:27:19.263 | INFO     | module_device.controller.template_controller:batch_import_point:138 - Import successful
+2026-05-19 11:27:32.405 | INFO     | module_device.controller.template_controller:batch_import_point:138 - Import successful
+2026-05-19 11:27:53.558 | INFO     | module_device.controller.template_controller:batch_import_point:138 - Import successful
+2026-05-19 13:18:01.325 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 13:18:19.270 | INFO     | module_device.controller.template_controller:get_template_list:39 - 获取成功
+2026-05-19 13:18:22.536 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-19 13:24:28.612 | INFO     | module_device.controller.template_controller:get_template_all:62 - 获取成功
+2026-05-19 13:24:38.367 | INFO     | module_device.controller.port_controller:get_port_list:40 - 获取成功
+2026-05-19 13:24:41.397 | INFO     | module_device.controller.device_controller:add_system_device:66 - Added successfully, device code: 1
+2026-05-19 13:24:41.490 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-19 13:24:45.226 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-19 13:24:45.314 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 13:24:51.101 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-19 13:24:54.893 | INFO     | module_device.controller.topology_controller:add_topology:33 - Added successfully
+2026-05-19 13:24:54.971 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-19 13:24:55.041 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 13:24:59.828 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 13:25:21.842 | INFO     | module_device.controller.template_controller:get_template_list:39 - 获取成功
+2026-05-19 13:26:12.384 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 14:28:33.135 | WARNING  | module_admin.service.login_service:get_current_user:231 - 用户token已失效，请重新登录
+2026-05-19 14:28:34.035 | INFO     | module_admin.controller.login_controller:logout:134 - 退出成功
+2026-05-19 14:31:53.816 | INFO     | module_admin.controller.login_controller:login:58 - 登录成功
+2026-05-19 14:31:53.952 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-19 14:31:54.056 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-19 14:31:55.256 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 14:31:58.331 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 14:38:44.509 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 14:40:23.757 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 14:40:39.618 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-19 14:40:44.279 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功

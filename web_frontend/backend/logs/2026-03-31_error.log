@@ -1,0 +1,17 @@
+2026-03-31 09:44:35.154 | INFO     | server:lifespan:35 - SCU-FastAPI Starting...
+2026-03-31 09:44:35.201 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-03-31 09:44:35.201 | INFO     | server:lifespan:39 - SCU-FastAPI Started successfully
+2026-03-31 09:45:52.483 | INFO     | server:lifespan:35 - SCU-FastAPI Starting...
+2026-03-31 09:45:52.516 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-03-31 09:45:52.516 | INFO     | server:lifespan:39 - SCU-FastAPI Started successfully
+2026-03-31 09:46:20.986 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-03-31 09:46:21.110 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-31 09:46:21.346 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-31 09:50:10.589 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-03-31 09:50:17.090 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-03-31 09:50:17.292 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-03-31 09:50:17.913 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-03-31 09:50:26.449 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-04-02 14:06:28.304 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-04-02 14:06:35.874 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-02 14:06:35.947 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功

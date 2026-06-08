@@ -1,0 +1,1194 @@
+2026-04-17 10:48:39.788 | INFO     | server:lifespan:35 - SCU-FastAPI Starting...
+2026-04-17 10:48:39.827 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-04-17 10:48:39.828 | INFO     | server:lifespan:39 - SCU-FastAPI Started successfully
+2026-04-17 10:52:18.078 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 10:52:18.132 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 10:52:18.201 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 10:52:18.538 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 11:20:47.340 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-04-17 11:20:56.642 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 11:20:56.904 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 13:52:00.161 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-17 13:52:00.201 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-04-17 13:52:00.203 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-17 14:18:17.051 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 14:18:17.259 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 14:25:30.156 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-17 14:25:30.183 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-04-17 14:25:30.183 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-17 14:27:38.029 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 14:27:38.290 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 14:28:54.272 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 14:28:54.326 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 14:37:10.515 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-17 14:37:10.539 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-04-17 14:37:10.539 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-17 14:40:36.827 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 14:40:37.035 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 14:45:26.814 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-17 14:45:26.831 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-04-17 14:45:26.831 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-17 14:51:43.652 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 14:51:43.681 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 14:51:46.198 | ERROR    | exceptions.handle:exception_handler:70 - (sqlite3.OperationalError) no such table: bms_sys_config
+[SQL: ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x0000020D851E8B80>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x0000020D855BA5B0>
+    └ <sqlalchemy.engine.base.Connection object at 0x0000020DA04D7550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ()
+    │      │       └ 'ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1'
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x0000020DA02AE3B0>
+
+sqlite3.OperationalError: no such table: bms_sys_config
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x0000020D820775E0>
+    └ <module 'uvicorn' from 'D:\\cure_builder_kicad\\BBMS\\BMS\\venv\\lib\\site-packages\\uvicorn\\__init__.py'>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x0000020D820C0670>
+    └ <uvicorn.server.Server object at 0x0000020DFFFAE3A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x0000020D820C0700>
+           │       │   └ <uvicorn.server.Server object at 0x0000020DFFFAE3A0>
+           │       └ <function run at 0x0000020D81CDA670>
+           └ <module 'asyncio' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x0000020D9FF62D40>
+           │    └ <function BaseEventLoop.run_until_complete at 0x0000020D81CD6940>
+           └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 603, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x0000020D81D84040>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x0000020D81CDA430>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x0000020D81C4F9D0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000020DA04D77F0>(<Future finished result=False>)>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x0000020DA04D77F0>(<Future finished result=False>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x0000020DA04D77F0>(<Future finished result=False>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x0000020DA04D77F0>(<Future finished result=False>)>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x0000020DA01AADF0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020DA0...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x0000020DFFFAE100>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x0000020DA01AADF0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020DA0...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020DA0...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000020DA02B53A0>
+          └ <fastapi.applications.FastAPI object at 0x0000020DFFFAE100>
+
+> File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x0000020DA03E0670>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x0000020DA02B5340>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x0000020DA02B53A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x0000020DA03E0670>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x0000020DA04B1670>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x0000020D8388E5E0>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x0000020DA04B1670>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x0000020DA02B5310>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x0000020DA04B1670>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x0000020DA04B1670>>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000020DA02B52B0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x0000020DA02B5310>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x0000020DA04B1670>>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x0000020DA04B1850>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x0000020D9EDAD640>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x0000020DA02B52B0>
+          └ <function wrap_app_handling_exceptions at 0x0000020D836BA040>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000020DA03E0C10>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x0000020D9EDAD640>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000020DA03E0C10>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x0000020D9EDAD640>>
+          └ <fastapi.routing.APIRouter object at 0x0000020D9EDAD640>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000020DA03E0C10>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │     └ <function Route.handle at 0x0000020D835FF4C0>
+          └ APIRoute(path='/battery-config/sys-config', name='get_bms_sys_config', methods=['GET'])
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000020DA03E0C10>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function request_response.<locals>.app at 0x0000020DA0189040>
+          └ APIRoute(path='/battery-config/sys-config', name='get_bms_sys_config', methods=['GET'])
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000020DA03E0C10>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x0000020DA04B12B0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x0000020DA0424550>
+          └ <function wrap_app_handling_exceptions at 0x0000020D836BA040>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x0000020DA04244C0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x0000020...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x0000020DA0424550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x0000020DA04B12B0>
+                     └ <function get_request_handler.<locals>.app at 0x0000020DA01894C0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x0000020D836BF0D0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'query_db': <sqlalchemy.orm.session.Session object at 0x0000020DA04430D0>, 'config_type': 0, 'request': <starlette.requests....
+                 │         └ <function get_bms_sys_config at 0x0000020D9ED62DC0>
+                 └ Dependant(path_params=[], query_params=[ModelField(field_info=Query(0), name='config_type', mode='validation')], header_param...
+
+  File "D:\cure_builder_kicad\BBMS\BMS\web-backend\module_device\controller\battery_config_controller.py", line 85, in get_bms_sys_config
+
+  File "D:\cure_builder_kicad\BBMS\BMS\web-backend\module_device\controller\battery_config_controller.py", line 52, in _ensure_bms_sys_config_schema
+    for row in rows:
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           │    └ <function Session._execute_internal at 0x0000020D854A3310>
+           └ <sqlalchemy.orm.session.Session object at 0x0000020DA04430D0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2245, in _execute_internal
+    result = conn.execute(
+             │    └ <function Connection.execute at 0x0000020D8511F3A0>
+             └ <sqlalchemy.engine.base.Connection object at 0x0000020DA04D7550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+           └ <bound method ClauseElement._execute_on_connection of <sqlalchemy.sql.elements.TextClause object at 0x0000020DA04D78E0>>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           │          └ <function Connection._execute_clauseelement at 0x0000020D8511F670>
+           └ <sqlalchemy.engine.base.Connection object at 0x0000020DA04D7550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          │    └ <function Connection._execute_context at 0x0000020D8511F820>
+          └ <sqlalchemy.engine.base.Connection object at 0x0000020DA04D7550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           │    └ <function Connection._exec_single_context at 0x0000020D8511F8B0>
+           └ <sqlalchemy.engine.base.Connection object at 0x0000020DA04D7550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    │    └ <function Connection._handle_dbapi_exception at 0x0000020D8511FAF0>
+    └ <sqlalchemy.engine.base.Connection object at 0x0000020DA04D7550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ OperationalError('no such table: bms_sys_config')
+          │                    │              └ (<class 'sqlite3.OperationalError'>, OperationalError('no such table: bms_sys_config'), <traceback object at 0x0000020DA04A5C...
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) no such table: bms_sys_config')
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x0000020D851E8B80>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x0000020D855BA5B0>
+    └ <sqlalchemy.engine.base.Connection object at 0x0000020DA04D7550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ()
+    │      │       └ 'ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1'
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x0000020DA02AE3B0>
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: bms_sys_config
+[SQL: ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 14:52:04.347 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-17 14:52:04.367 | ERROR    | module_device.service.scu_version_service:init_web_version:34 - SCU version initialization failed: (sqlite3.OperationalError) no such table: pcs_soft_version
+[SQL: SELECT pcs_soft_version.id AS pcs_soft_version_id, pcs_soft_version.name AS pcs_soft_version_name, pcs_soft_version.cpld_version AS pcs_soft_version_cpld_version, pcs_soft_version.dsp_cpu1_version AS pcs_soft_version_dsp_cpu1_version, pcs_soft_version.dsp_cpu2_version AS pcs_soft_version_dsp_cpu2_version, pcs_soft_version.pcs_version AS pcs_soft_version_pcs_version 
+FROM pcs_soft_version 
+WHERE pcs_soft_version.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (18, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 14:52:37.632 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-17 14:52:37.646 | ERROR    | module_device.service.scu_version_service:init_web_version:34 - SCU version initialization failed: (sqlite3.OperationalError) no such table: pcs_soft_version
+[SQL: SELECT pcs_soft_version.id AS pcs_soft_version_id, pcs_soft_version.name AS pcs_soft_version_name, pcs_soft_version.cpld_version AS pcs_soft_version_cpld_version, pcs_soft_version.dsp_cpu1_version AS pcs_soft_version_dsp_cpu1_version, pcs_soft_version.dsp_cpu2_version AS pcs_soft_version_dsp_cpu2_version, pcs_soft_version.pcs_version AS pcs_soft_version_pcs_version 
+FROM pcs_soft_version 
+WHERE pcs_soft_version.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (18, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 14:52:37.647 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-17 14:52:51.670 | ERROR    | exceptions.handle:exception_handler:70 - (sqlite3.OperationalError) no such table: bms_sys_config
+[SQL: ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x000002A51CBB7B80>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000002A51CF8F5B0>
+    └ <sqlalchemy.engine.base.Connection object at 0x000002A537DDF850>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ()
+    │      │       └ 'ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1'
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x000002A537DA37A0>
+
+sqlite3.OperationalError: no such table: bms_sys_config
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x000002A519A495E0>
+    └ <module 'uvicorn' from 'D:\\cure_builder_kicad\\BBMS\\BMS\\venv\\lib\\site-packages\\uvicorn\\__init__.py'>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x000002A519A90670>
+    └ <uvicorn.server.Server object at 0x000002A5179AE3A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002A519A90700>
+           │       │   └ <uvicorn.server.Server object at 0x000002A5179AE3A0>
+           │       └ <function run at 0x000002A51969A670>
+           └ <module 'asyncio' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x000002A53695ED40>
+           │    └ <function BaseEventLoop.run_until_complete at 0x000002A519696940>
+           └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 603, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002A519754040>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002A51969A430>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002A517E509D0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002A537DDFA90>(<Future finished result=False>)>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002A537DDFA90>(<Future finished result=False>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002A537DDFA90>(<Future finished result=False>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002A537DDFA90>(<Future finished result=False>)>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002A537B8D130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A537...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002A5179AE100>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002A537B8D130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A537...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A537...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002A537C881F0>
+          └ <fastapi.applications.FastAPI object at 0x000002A5179AE100>
+
+> File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A537D4FE50>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x000002A537C88190>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002A537C881F0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\gzip.py", line 22, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A537D4FE50>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002A537C88160>
+          └ <starlette.middleware.gzip.GZipMiddleware object at 0x000002A537C88190>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A537D4FE50>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002A537C88100>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002A537C88160>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A537D4FE50>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002A537D7A4F0>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002A5367796A0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002A537C88100>
+          └ <function wrap_app_handling_exceptions at 0x000002A51B08B040>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537D4FF70>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x000002A5367796A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537D4FF70>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002A5367796A0>>
+          └ <fastapi.routing.APIRouter object at 0x000002A5367796A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537D4FF70>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │     └ <function Route.handle at 0x000002A51AFCA4C0>
+          └ APIRoute(path='/battery-config/sys-config', name='get_bms_sys_config', methods=['GET'])
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537D4FF70>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function request_response.<locals>.app at 0x000002A537B5A310>
+          └ APIRoute(path='/battery-config/sys-config', name='get_bms_sys_config', methods=['GET'])
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537D4FF70>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000002A537D7A760>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002A537D76430>
+          └ <function wrap_app_handling_exceptions at 0x000002A51B08B040>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537D764C0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002A537D76430>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000002A537D7A760>
+                     └ <function get_request_handler.<locals>.app at 0x000002A537B5A280>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002A51AFCF0D0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'query_db': <sqlalchemy.orm.session.Session object at 0x000002A537D99070>, 'config_type': 0, 'request': <starlette.requests....
+                 │         └ <function get_bms_sys_config at 0x000002A536732C10>
+                 └ Dependant(path_params=[], query_params=[ModelField(field_info=Query(0), name='config_type', mode='validation')], header_param...
+
+  File "D:\cure_builder_kicad\BBMS\BMS\web-backend\module_device\controller\battery_config_controller.py", line 26, in get_bms_sys_config
+    _ensure_bms_sys_config_schema(query_db)
+    │                             └ <sqlalchemy.orm.session.Session object at 0x000002A537D99070>
+    └ <function _ensure_bms_sys_config_schema at 0x000002A5367061F0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\web-backend\module_device\controller\battery_config_controller.py", line 17, in _ensure_bms_sys_config_schema
+    query_db.execute(text("ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1"))
+    │        │       └ <function text at 0x000002A51CA7F8B0>
+    │        └ <function Session.execute at 0x000002A51CE733A0>
+    └ <sqlalchemy.orm.session.Session object at 0x000002A537D99070>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           │    └ <function Session._execute_internal at 0x000002A51CE73310>
+           └ <sqlalchemy.orm.session.Session object at 0x000002A537D99070>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2245, in _execute_internal
+    result = conn.execute(
+             │    └ <function Connection.execute at 0x000002A51CAEE3A0>
+             └ <sqlalchemy.engine.base.Connection object at 0x000002A537DDF850>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+           └ <bound method ClauseElement._execute_on_connection of <sqlalchemy.sql.elements.TextClause object at 0x000002A537DDFBE0>>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           │          └ <function Connection._execute_clauseelement at 0x000002A51CAEE670>
+           └ <sqlalchemy.engine.base.Connection object at 0x000002A537DDF850>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          │    └ <function Connection._execute_context at 0x000002A51CAEE820>
+          └ <sqlalchemy.engine.base.Connection object at 0x000002A537DDF850>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           │    └ <function Connection._exec_single_context at 0x000002A51CAEE8B0>
+           └ <sqlalchemy.engine.base.Connection object at 0x000002A537DDF850>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    │    └ <function Connection._handle_dbapi_exception at 0x000002A51CAEEAF0>
+    └ <sqlalchemy.engine.base.Connection object at 0x000002A537DDF850>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ OperationalError('no such table: bms_sys_config')
+          │                    │              └ (<class 'sqlite3.OperationalError'>, OperationalError('no such table: bms_sys_config'), <traceback object at 0x000002A537DED0...
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) no such table: bms_sys_config')
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x000002A51CBB7B80>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000002A51CF8F5B0>
+    └ <sqlalchemy.engine.base.Connection object at 0x000002A537DDF850>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ()
+    │      │       └ 'ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1'
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x000002A537DA37A0>
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: bms_sys_config
+[SQL: ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 14:52:51.776 | ERROR    | exceptions.handle:exception_handler:70 - (sqlite3.OperationalError) no such table: bms_sys_config
+[SQL: ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x000002A51CBB7B80>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000002A51CF8F5B0>
+    └ <sqlalchemy.engine.base.Connection object at 0x000002A5380B9550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ()
+    │      │       └ 'ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1'
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x000002A537F723B0>
+
+sqlite3.OperationalError: no such table: bms_sys_config
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x000002A519A495E0>
+    └ <module 'uvicorn' from 'D:\\cure_builder_kicad\\BBMS\\BMS\\venv\\lib\\site-packages\\uvicorn\\__init__.py'>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x000002A519A90670>
+    └ <uvicorn.server.Server object at 0x000002A5179AE3A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002A519A90700>
+           │       │   └ <uvicorn.server.Server object at 0x000002A5179AE3A0>
+           │       └ <function run at 0x000002A51969A670>
+           └ <module 'asyncio' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x000002A53695ED40>
+           │    └ <function BaseEventLoop.run_until_complete at 0x000002A519696940>
+           └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 603, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002A519754040>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002A51969A430>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002A517E509D0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002A5380B96D0>(<Future finished result=False>)>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002A5380B96D0>(<Future finished result=False>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002A5380B96D0>(<Future finished result=False>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002A5380B96D0>(<Future finished result=False>)>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002A537B8D130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A537...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002A5179AE100>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002A537B8D130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A537...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A537...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002A537C881F0>
+          └ <fastapi.applications.FastAPI object at 0x000002A5179AE100>
+
+> File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A537DAB8B0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x000002A537C88190>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002A537C881F0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\gzip.py", line 22, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A537DAB8B0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002A537C88160>
+          └ <starlette.middleware.gzip.GZipMiddleware object at 0x000002A537C88190>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A537DAB8B0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002A537C88100>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002A537C88160>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A537DAB8B0>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002A537DDFD00>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002A5367796A0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002A537C88100>
+          └ <function wrap_app_handling_exceptions at 0x000002A51B08B040>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537DAB5E0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x000002A5367796A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537DAB5E0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002A5367796A0>>
+          └ <fastapi.routing.APIRouter object at 0x000002A5367796A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537DAB5E0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │     └ <function Route.handle at 0x000002A51AFCA4C0>
+          └ APIRoute(path='/battery-config/sys-config', name='get_bms_sys_config', methods=['GET'])
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537DAB5E0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function request_response.<locals>.app at 0x000002A537B5A310>
+          └ APIRoute(path='/battery-config/sys-config', name='get_bms_sys_config', methods=['GET'])
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A537DAB5E0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000002A537DDF790>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002A538073820>
+          └ <function wrap_app_handling_exceptions at 0x000002A51B08B040>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A538073700>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002A538073820>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000002A537DDF790>
+                     └ <function get_request_handler.<locals>.app at 0x000002A537B5A280>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002A51AFCF0D0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'query_db': <sqlalchemy.orm.session.Session object at 0x000002A537DDF640>, 'config_type': 1, 'request': <starlette.requests....
+                 │         └ <function get_bms_sys_config at 0x000002A536732C10>
+                 └ Dependant(path_params=[], query_params=[ModelField(field_info=Query(0), name='config_type', mode='validation')], header_param...
+
+  File "D:\cure_builder_kicad\BBMS\BMS\web-backend\module_device\controller\battery_config_controller.py", line 26, in get_bms_sys_config
+    _ensure_bms_sys_config_schema(query_db)
+    │                             └ <sqlalchemy.orm.session.Session object at 0x000002A537DDF640>
+    └ <function _ensure_bms_sys_config_schema at 0x000002A5367061F0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\web-backend\module_device\controller\battery_config_controller.py", line 17, in _ensure_bms_sys_config_schema
+    query_db.execute(text("ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1"))
+    │        │       └ <function text at 0x000002A51CA7F8B0>
+    │        └ <function Session.execute at 0x000002A51CE733A0>
+    └ <sqlalchemy.orm.session.Session object at 0x000002A537DDF640>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           │    └ <function Session._execute_internal at 0x000002A51CE73310>
+           └ <sqlalchemy.orm.session.Session object at 0x000002A537DDF640>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2245, in _execute_internal
+    result = conn.execute(
+             │    └ <function Connection.execute at 0x000002A51CAEE3A0>
+             └ <sqlalchemy.engine.base.Connection object at 0x000002A5380B9550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+           └ <bound method ClauseElement._execute_on_connection of <sqlalchemy.sql.elements.TextClause object at 0x000002A5380B9820>>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           │          └ <function Connection._execute_clauseelement at 0x000002A51CAEE670>
+           └ <sqlalchemy.engine.base.Connection object at 0x000002A5380B9550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          │    └ <function Connection._execute_context at 0x000002A51CAEE820>
+          └ <sqlalchemy.engine.base.Connection object at 0x000002A5380B9550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           │    └ <function Connection._exec_single_context at 0x000002A51CAEE8B0>
+           └ <sqlalchemy.engine.base.Connection object at 0x000002A5380B9550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    │    └ <function Connection._handle_dbapi_exception at 0x000002A51CAEEAF0>
+    └ <sqlalchemy.engine.base.Connection object at 0x000002A5380B9550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ OperationalError('no such table: bms_sys_config')
+          │                    │              └ (<class 'sqlite3.OperationalError'>, OperationalError('no such table: bms_sys_config'), <traceback object at 0x000002A5380AC3...
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) no such table: bms_sys_config')
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x000002A51CBB7B80>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000002A51CF8F5B0>
+    └ <sqlalchemy.engine.base.Connection object at 0x000002A5380B9550>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ()
+    │      │       └ 'ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1'
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x000002A537F723B0>
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: bms_sys_config
+[SQL: ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 14:52:51.983 | ERROR    | exceptions.handle:exception_handler:70 - (sqlite3.OperationalError) no such table: bms_sys_config
+[SQL: ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x000002A51CBB7B80>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000002A51CF8F5B0>
+    └ <sqlalchemy.engine.base.Connection object at 0x000002A5380C5130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ()
+    │      │       └ 'ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1'
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x000002A537E626C0>
+
+sqlite3.OperationalError: no such table: bms_sys_config
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x000002A519A495E0>
+    └ <module 'uvicorn' from 'D:\\cure_builder_kicad\\BBMS\\BMS\\venv\\lib\\site-packages\\uvicorn\\__init__.py'>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x000002A519A90670>
+    └ <uvicorn.server.Server object at 0x000002A5179AE3A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000002A519A90700>
+           │       │   └ <uvicorn.server.Server object at 0x000002A5179AE3A0>
+           │       └ <function run at 0x000002A51969A670>
+           └ <module 'asyncio' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x000002A53695ED40>
+           │    └ <function BaseEventLoop.run_until_complete at 0x000002A519696940>
+           └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 603, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000002A519754040>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002A51969A430>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002A517E509D0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002A5380C52B0>(<Future finished result=False>)>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000002A5380C52B0>(<Future finished result=False>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000002A5380C52B0>(<Future finished result=False>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000002A5380C52B0>(<Future finished result=False>)>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002A537B8D130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A538...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x000002A5179AE100>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000002A537B8D130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A538...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A538...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002A537C881F0>
+          └ <fastapi.applications.FastAPI object at 0x000002A5179AE100>
+
+> File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A5380739D0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x000002A537C88190>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000002A537C881F0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\gzip.py", line 22, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A5380739D0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000002A537C88160>
+          └ <starlette.middleware.gzip.GZipMiddleware object at 0x000002A537C88190>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A5380739D0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002A537C88100>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000002A537C88160>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000002A5380739D0>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000002A5380B9700>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000002A5367796A0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000002A537C88100>
+          └ <function wrap_app_handling_exceptions at 0x000002A51B08B040>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A538073790>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x000002A5367796A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A538073790>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000002A5367796A0>>
+          └ <fastapi.routing.APIRouter object at 0x000002A5367796A0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A538073790>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │     └ <function Route.handle at 0x000002A51AFCA4C0>
+          └ APIRoute(path='/battery-config/sys-config', name='get_bms_sys_config', methods=['GET'])
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A538073790>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function request_response.<locals>.app at 0x000002A537B5A310>
+          └ APIRoute(path='/battery-config/sys-config', name='get_bms_sys_config', methods=['GET'])
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A538073790>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000002A5380B99D0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000002A538073A60>
+          └ <function wrap_app_handling_exceptions at 0x000002A51B08B040>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000002A538073B80>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000002A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000002A538073A60>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000002A5380B99D0>
+                     └ <function get_request_handler.<locals>.app at 0x000002A537B5A280>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000002A51AFCF0D0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'query_db': <sqlalchemy.orm.session.Session object at 0x000002A537D7AAC0>, 'config_type': 2, 'request': <starlette.requests....
+                 │         └ <function get_bms_sys_config at 0x000002A536732C10>
+                 └ Dependant(path_params=[], query_params=[ModelField(field_info=Query(0), name='config_type', mode='validation')], header_param...
+
+  File "D:\cure_builder_kicad\BBMS\BMS\web-backend\module_device\controller\battery_config_controller.py", line 26, in get_bms_sys_config
+    _ensure_bms_sys_config_schema(query_db)
+    │                             └ <sqlalchemy.orm.session.Session object at 0x000002A537D7AAC0>
+    └ <function _ensure_bms_sys_config_schema at 0x000002A5367061F0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\web-backend\module_device\controller\battery_config_controller.py", line 17, in _ensure_bms_sys_config_schema
+    query_db.execute(text("ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1"))
+    │        │       └ <function text at 0x000002A51CA7F8B0>
+    │        └ <function Session.execute at 0x000002A51CE733A0>
+    └ <sqlalchemy.orm.session.Session object at 0x000002A537D7AAC0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           │    └ <function Session._execute_internal at 0x000002A51CE73310>
+           └ <sqlalchemy.orm.session.Session object at 0x000002A537D7AAC0>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2245, in _execute_internal
+    result = conn.execute(
+             │    └ <function Connection.execute at 0x000002A51CAEE3A0>
+             └ <sqlalchemy.engine.base.Connection object at 0x000002A5380C5130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+           └ <bound method ClauseElement._execute_on_connection of <sqlalchemy.sql.elements.TextClause object at 0x000002A5380B9D90>>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           │          └ <function Connection._execute_clauseelement at 0x000002A51CAEE670>
+           └ <sqlalchemy.engine.base.Connection object at 0x000002A5380C5130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          │    └ <function Connection._execute_context at 0x000002A51CAEE820>
+          └ <sqlalchemy.engine.base.Connection object at 0x000002A5380C5130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           │    └ <function Connection._exec_single_context at 0x000002A51CAEE8B0>
+           └ <sqlalchemy.engine.base.Connection object at 0x000002A5380C5130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    │    └ <function Connection._handle_dbapi_exception at 0x000002A51CAEEAF0>
+    └ <sqlalchemy.engine.base.Connection object at 0x000002A5380C5130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ OperationalError('no such table: bms_sys_config')
+          │                    │              └ (<class 'sqlite3.OperationalError'>, OperationalError('no such table: bms_sys_config'), <traceback object at 0x000002A5380C1F...
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) no such table: bms_sys_config')
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x000002A51CBB7B80>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000002A51CF8F5B0>
+    └ <sqlalchemy.engine.base.Connection object at 0x000002A5380C5130>
+
+  File "D:\cure_builder_kicad\BBMS\BMS\venv\lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ()
+    │      │       └ 'ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1'
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x000002A537E626C0>
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: bms_sys_config
+[SQL: ALTER TABLE bms_sys_config ADD COLUMN is_show INTEGER NOT NULL DEFAULT 1]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 14:55:04.648 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-17 14:55:04.663 | ERROR    | module_device.service.scu_version_service:init_web_version:34 - SCU version initialization failed: (sqlite3.OperationalError) no such table: pcs_soft_version
+[SQL: SELECT pcs_soft_version.id AS pcs_soft_version_id, pcs_soft_version.name AS pcs_soft_version_name, pcs_soft_version.cpld_version AS pcs_soft_version_cpld_version, pcs_soft_version.dsp_cpu1_version AS pcs_soft_version_dsp_cpu1_version, pcs_soft_version.dsp_cpu2_version AS pcs_soft_version_dsp_cpu2_version, pcs_soft_version.pcs_version AS pcs_soft_version_pcs_version 
+FROM pcs_soft_version 
+WHERE pcs_soft_version.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (18, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 14:55:04.663 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-17 14:59:45.834 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 14:59:46.101 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 15:01:19.556 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 15:01:19.584 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 15:05:03.155 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 15:05:03.207 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 15:06:37.001 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 15:06:37.050 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 15:18:51.434 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 15:18:51.528 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 15:19:01.713 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 15:19:01.868 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 20:09:35.465 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-17 20:09:35.480 | ERROR    | module_device.service.scu_version_service:init_web_version:34 - SCU version initialization failed: (sqlite3.OperationalError) no such table: pcs_soft_version
+[SQL: SELECT pcs_soft_version.id AS pcs_soft_version_id, pcs_soft_version.name AS pcs_soft_version_name, pcs_soft_version.cpld_version AS pcs_soft_version_cpld_version, pcs_soft_version.dsp_cpu1_version AS pcs_soft_version_dsp_cpu1_version, pcs_soft_version.dsp_cpu2_version AS pcs_soft_version_dsp_cpu2_version, pcs_soft_version.pcs_version AS pcs_soft_version_pcs_version 
+FROM pcs_soft_version 
+WHERE pcs_soft_version.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (18, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 20:09:35.480 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-17 20:10:31.380 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-17 20:10:31.398 | ERROR    | module_device.service.scu_version_service:init_web_version:34 - SCU version initialization failed: (sqlite3.OperationalError) no such table: pcs_soft_version
+[SQL: SELECT pcs_soft_version.id AS pcs_soft_version_id, pcs_soft_version.name AS pcs_soft_version_name, pcs_soft_version.cpld_version AS pcs_soft_version_cpld_version, pcs_soft_version.dsp_cpu1_version AS pcs_soft_version_dsp_cpu1_version, pcs_soft_version.dsp_cpu2_version AS pcs_soft_version_dsp_cpu2_version, pcs_soft_version.pcs_version AS pcs_soft_version_pcs_version 
+FROM pcs_soft_version 
+WHERE pcs_soft_version.id = ?
+ LIMIT ? OFFSET ?]
+[parameters: (18, 1, 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-17 20:10:31.399 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-17 20:13:14.415 | WARNING  | module_admin.service.login_service:get_current_user:227 - 用户token已失效，请重新登录
+2026-04-17 20:13:14.439 | INFO     | module_admin.controller.login_controller:logout:129 - 退出成功
+2026-04-17 20:14:40.560 | INFO     | module_admin.controller.login_controller:login:53 - 登录成功
+2026-04-17 20:14:40.630 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 20:14:40.981 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 20:29:09.675 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 20:29:09.714 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 20:29:16.451 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 20:29:16.497 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 20:29:40.417 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-17 20:29:40.520 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-17 20:32:08.288 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功

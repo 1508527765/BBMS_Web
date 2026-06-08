@@ -1,0 +1,1981 @@
+2026-04-27 16:48:25.364 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-27 16:48:25.366 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-27 16:49:39.906 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-27 16:49:39.906 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-27 17:19:01.098 | ERROR    | module_admin.annotation.log_annotation:wrapper:127 - (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+    │                        │      └ <function Engine.raw_connection at 0x000001AF90DF0430>
+    │                        └ Engine(sqlite:////opt/bbms/db/web.db)
+    └ <sqlalchemy.engine.base.Connection object at 0x000001AFAC0EB070>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+           │    │    └ <function Pool.connect at 0x000001AF9098F790>
+           │    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           │                │         └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           │                └ <classmethod object at 0x000001AF90988EB0>
+           └ <class 'sqlalchemy.pool.base._ConnectionFairy'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            │                 │        └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+            │                 └ <classmethod object at 0x000001AF90988AC0>
+            └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          │    └ <function NullPool._do_get at 0x000001AF909B0550>
+          └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 308, in _do_get
+    return self._create_connection()
+           │    └ <function Pool._create_connection at 0x000001AF9098F550>
+           └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           │                 └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC0F39A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+    │    │      └ <function Logger.debug at 0x000001AF8BE269D0>
+    │    └ <Logger sqlalchemy.pool.impl.NullPool (WARNING)>
+    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFAC1068C0>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+    │    │                               │    │               └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC0F39A0>
+    │    │                               │    └ <function create_engine.<locals>.connect at 0x000001AF91246820>
+    │    │                               └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+    │    └ <member 'dbapi_connection' of '_ConnectionRecord' objects>
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC0F39A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           │       │        │        └ {'check_same_thread': False}
+           │       │        └ ['C:\\opt\\bbms\\db\\web.db']
+           │       └ <function DefaultDialect.connect at 0x000001AF90EA6670>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           │    │            │        │        └ {'check_same_thread': False}
+           │    │            │        └ ('C:\\opt\\bbms\\db\\web.db',)
+           │    │            └ <built-in function connect>
+           │    └ <module 'sqlite3.dbapi2' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\sqlite3\\dbapi2.py'>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+sqlite3.OperationalError: unable to open database file
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x000001AF8DD829D0>
+    └ <module 'uvicorn' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\uvicorn\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x000001AF8DD82310>
+    └ <uvicorn.server.Server object at 0x000001AF8BCCE3A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000001AF8DD823A0>
+           │       │   └ <uvicorn.server.Server object at 0x000001AF8BCCE3A0>
+           │       └ <function run at 0x000001AF8D98A790>
+           └ <module 'asyncio' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x000001AFABCD37C0>
+           │    └ <function BaseEventLoop.run_until_complete at 0x000001AF8D986A60>
+           └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 603, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001AF8DA44160>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001AF8D98A550>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001AF8C13CAF0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC01D190>(<Future finis...01AFABFA1550>>)>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC01D190>(<Future finis...01AFABFA1550>>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC01D190>(<Future finis...01AFABFA1550>>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC01D190>(<Future finis...01AFABFA1550>>)>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001AFABE81D90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAB...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x000001AF8BCCE100>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001AFABE81D90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAB...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAB...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001AFABF8C280>
+          └ <fastapi.applications.FastAPI object at 0x000001AF8BCCE100>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001AFABF9C1F0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x000001AFABF8C220>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001AFABF8C280>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001AFABF9C1F0>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFABF8EA90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x000001AF8F5588B0>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFABF8EA90>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFABF8EA90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'x-forwarded-host': 'localhost', 'x-forwarded-proto': 'http', 'x-forwarded-port': '80', 'x-forwarded-for': '127.0.0....
+          │    │               │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x000001AFABF8EA90>>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001AF8F541700>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001AFABF8C190>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001AFABF8ED60>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001AFABF8C190>
+          └ <function wrap_app_handling_exceptions at 0x000001AF8F1D7670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>>
+          └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │     └ <function Route.handle at 0x000001AF8F370B80>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function request_response.<locals>.app at 0x000001AFAAAA0700>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001AFABF8EFD0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001AFABF9C3A0>
+          └ <function wrap_app_handling_exceptions at 0x000001AF8F1D7670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C430>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001AFABF9C3A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001AFABF8EFD0>
+                     └ <function get_request_handler.<locals>.app at 0x000001AFAAAA08B0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001AF8F374790>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'form_data': <module_admin.service.login_service.CustomOAuth2PasswordRequestForm object at 0x000001AFABFA15B0>, 'query_db': ...
+                 │         └ <function login at 0x000001AFAA3AFC10>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[], dependencies=[Dependant(path_p...
+
+> File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\annotation\log_annotation.py", line 119, in wrapper
+    result = await func(*args, **kwargs)
+                   │     │       └ {'form_data': <module_admin.service.login_service.CustomOAuth2PasswordRequestForm object at 0x000001AFABFA15B0>, 'query_db': ...
+                   │     └ ()
+                   └ <function login at 0x000001AFAA3AFCA0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\controller\login_controller.py", line 37, in login
+    result = await LoginService.authenticate_user(request, query_db, user)
+                   │            │                 │        │         └ UserLogin(user_name='admin', password='admin123', code='', uuid='', login_info={'ipaddr': '127.0.0.1', 'loginLocation': '内网IP...
+                   │            │                 │        └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+                   │            │                 └ <starlette.requests.Request object at 0x000001AFABF8EFD0>
+                   │            └ <classmethod object at 0x000001AFA9EA2EE0>
+                   └ <class 'module_admin.service.login_service.LoginService'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\service\login_service.py", line 148, in authenticate_user
+    user = login_by_account(query_db, login_user.user_name)
+           │                │         │          └ 'admin'
+           │                │         └ UserLogin(user_name='admin', password='admin123', code='', uuid='', login_info={'ipaddr': '127.0.0.1', 'loginLocation': '内网IP...
+           │                └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+           └ <function login_by_account at 0x000001AF9129AAF0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\dao\login_dao.py", line 27, in login_by_account
+    user = query.first()
+           │     └ <function Query.first at 0x000001AF910E33A0>
+           └ <sqlalchemy.orm.query.Query object at 0x000001AFAC0DFD90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2728, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           │    └ <function Query.limit at 0x000001AF910E0B80>
+           └ <sqlalchemy.orm.query.Query object at 0x000001AFAC0DFD90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+            │                  │    │      │      │    │       └ <function Session.execute at 0x000001AF9116D160>
+            │                  │    │      │      │    └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+            │                  │    │      │      └ <sqlalchemy.orm.query.Query object at 0x000001AFAC0F70A0>
+            │                  │    │      └ ~_T
+            │                  │    └ <class 'sqlalchemy.engine.result.Result'>
+            │                  └ ~_T
+            └ typing.Union
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           │    └ <function Session._execute_internal at 0x000001AF9116D0D0>
+           └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2226, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           │    │                    └ Engine(sqlite:////opt/bbms/db/web.db)
+           │    └ <function Session._connection_for_bind at 0x000001AF9116D040>
+           └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2095, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           │     │                    │       └ None
+           │     │                    └ Engine(sqlite:////opt/bbms/db/web.db)
+           │     └ <function SessionTransaction._connection_for_bind at 0x000001AF91164D30>
+           └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC0F9900>
+
+  File "<string>", line 2, in _connection_for_bind
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {}
+                │  │      └ (Engine(sqlite:////opt/bbms/db/web.db), None)
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC0F9900>
+                └ <function SessionTransaction._connection_for_bind at 0x000001AF91164C10>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           │    └ <function Engine.connect at 0x000001AF90DF03A0>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3276, in connect
+    return self._connection_cls(self)
+           │    │               └ Engine(sqlite:////opt/bbms/db/web.db)
+           │    └ <class 'sqlalchemy.engine.base.Connection'>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 148, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    │          └ <classmethod object at 0x000001AF9090DBE0>
+    └ <class 'sqlalchemy.engine.base.Connection'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ OperationalError('unable to open database file')
+          │                    │              └ (<class 'sqlite3.OperationalError'>, OperationalError('unable to open database file'), <traceback object at 0x000001AFAC10B600>)
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+    │                        │      └ <function Engine.raw_connection at 0x000001AF90DF0430>
+    │                        └ Engine(sqlite:////opt/bbms/db/web.db)
+    └ <sqlalchemy.engine.base.Connection object at 0x000001AFAC0EB070>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+           │    │    └ <function Pool.connect at 0x000001AF9098F790>
+           │    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           │                │         └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           │                └ <classmethod object at 0x000001AF90988EB0>
+           └ <class 'sqlalchemy.pool.base._ConnectionFairy'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            │                 │        └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+            │                 └ <classmethod object at 0x000001AF90988AC0>
+            └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          │    └ <function NullPool._do_get at 0x000001AF909B0550>
+          └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 308, in _do_get
+    return self._create_connection()
+           │    └ <function Pool._create_connection at 0x000001AF9098F550>
+           └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           │                 └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC0F39A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+    │    │      └ <function Logger.debug at 0x000001AF8BE269D0>
+    │    └ <Logger sqlalchemy.pool.impl.NullPool (WARNING)>
+    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFAC1068C0>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+    │    │                               │    │               └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC0F39A0>
+    │    │                               │    └ <function create_engine.<locals>.connect at 0x000001AF91246820>
+    │    │                               └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+    │    └ <member 'dbapi_connection' of '_ConnectionRecord' objects>
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC0F39A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           │       │        │        └ {'check_same_thread': False}
+           │       │        └ ['C:\\opt\\bbms\\db\\web.db']
+           │       └ <function DefaultDialect.connect at 0x000001AF90EA6670>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           │    │            │        │        └ {'check_same_thread': False}
+           │    │            │        └ ('C:\\opt\\bbms\\db\\web.db',)
+           │    │            └ <built-in function connect>
+           │    └ <module 'sqlite3.dbapi2' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\sqlite3\\dbapi2.py'>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-27 17:19:02.023 | ERROR    | exceptions.handle:exception_handler:70 - (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+    │                        │      └ <function Engine.raw_connection at 0x000001AF90DF0430>
+    │                        └ Engine(sqlite:////opt/bbms/db/web.db)
+    └ <sqlalchemy.engine.base.Connection object at 0x000001AFAC10D220>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+           │    │    └ <function Pool.connect at 0x000001AF9098F790>
+           │    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           │                │         └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           │                └ <classmethod object at 0x000001AF90988EB0>
+           └ <class 'sqlalchemy.pool.base._ConnectionFairy'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            │                 │        └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+            │                 └ <classmethod object at 0x000001AF90988AC0>
+            └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          │    └ <function NullPool._do_get at 0x000001AF909B0550>
+          └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 308, in _do_get
+    return self._create_connection()
+           │    └ <function Pool._create_connection at 0x000001AF9098F550>
+           └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           │                 └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFABF8B460>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+    │    │      └ <function Logger.debug at 0x000001AF8BE269D0>
+    │    └ <Logger sqlalchemy.pool.impl.NullPool (WARNING)>
+    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFABF966C0>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+    │    │                               │    │               └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFABF8B460>
+    │    │                               │    └ <function create_engine.<locals>.connect at 0x000001AF91246820>
+    │    │                               └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+    │    └ <member 'dbapi_connection' of '_ConnectionRecord' objects>
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFABF8B460>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           │       │        │        └ {'check_same_thread': False}
+           │       │        └ ['C:\\opt\\bbms\\db\\web.db']
+           │       └ <function DefaultDialect.connect at 0x000001AF90EA6670>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           │    │            │        │        └ {'check_same_thread': False}
+           │    │            │        └ ('C:\\opt\\bbms\\db\\web.db',)
+           │    │            └ <built-in function connect>
+           │    └ <module 'sqlite3.dbapi2' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\sqlite3\\dbapi2.py'>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+sqlite3.OperationalError: unable to open database file
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x000001AF8DD829D0>
+    └ <module 'uvicorn' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\uvicorn\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x000001AF8DD82310>
+    └ <uvicorn.server.Server object at 0x000001AF8BCCE3A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000001AF8DD823A0>
+           │       │   └ <uvicorn.server.Server object at 0x000001AF8BCCE3A0>
+           │       └ <function run at 0x000001AF8D98A790>
+           └ <module 'asyncio' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x000001AFABCD37C0>
+           │    └ <function BaseEventLoop.run_until_complete at 0x000001AF8D986A60>
+           └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 603, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001AF8DA44160>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001AF8D98A550>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001AF8C13CAF0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC10D130>(<Future finished result=False>)>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC10D130>(<Future finished result=False>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC10D130>(<Future finished result=False>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC10D130>(<Future finished result=False>)>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001AFABE81D90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAB...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x000001AF8BCCE100>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001AFABE81D90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAB...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAB...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001AFABF8C280>
+          └ <fastapi.applications.FastAPI object at 0x000001AF8BCCE100>
+
+> File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001AFABF9C1F0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x000001AFABF8C220>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001AFABF8C280>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001AFABF9C1F0>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFABF8EA90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x000001AF8F5588B0>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFABF8EA90>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFABF8EA90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'x-forwarded-host': 'localhost', 'x-forwarded-proto': 'http', 'x-forwarded-port': '80', 'x-forwarded-for': '127.0.0....
+          │    │               │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x000001AFABF8EA90>>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001AF8F541700>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001AFABF8C190>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001AFABF8ED60>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001AFABF8C190>
+          └ <function wrap_app_handling_exceptions at 0x000001AF8F1D7670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>>
+          └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │     └ <function Route.handle at 0x000001AF8F370B80>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function request_response.<locals>.app at 0x000001AFAAAA0700>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C310>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001AFABF8EFD0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001AFABF9C3A0>
+          └ <function wrap_app_handling_exceptions at 0x000001AF8F1D7670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFABF9C430>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001AFABF9C3A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001AFABF8EFD0>
+                     └ <function get_request_handler.<locals>.app at 0x000001AFAAAA08B0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001AF8F374790>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'form_data': <module_admin.service.login_service.CustomOAuth2PasswordRequestForm object at 0x000001AFABFA15B0>, 'query_db': ...
+                 │         └ <function login at 0x000001AFAA3AFC10>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[], dependencies=[Dependant(path_p...
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\annotation\log_annotation.py", line 174, in wrapper
+    await LoginLogService.add_login_log_services(query_db, LogininforModel(**login_log))
+          │               │                      │         │                 └ {'ipaddr': '127.0.0.1', 'loginLocation': '内网IP', 'browser': 'Chrome 147', 'os': 'Windows 10', 'loginTime': datetime.datetime(...
+          │               │                      │         └ <class 'module_admin.entity.vo.log_vo.LogininforModel'>
+          │               │                      └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+          │               └ <classmethod object at 0x000001AFAA314520>
+          └ <class 'module_admin.service.log_service.LoginLogService'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\service\log_service.py", line 185, in add_login_log_services
+    raise e
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\service\log_service.py", line 180, in add_login_log_services
+    await LoginLogDao.add_login_log_dao(query_db, page_object)
+          │           │                 │         └ LogininforModel(info_id=None, user_name='admin', ipaddr='127.0.0.1', login_location='内网IP', browser='Chrome 147', os='Windows...
+          │           │                 └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+          │           └ <classmethod object at 0x000001AFAA284FA0>
+          └ <class 'module_admin.dao.log_dao.LoginLogDao'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\dao\log_dao.py", line 148, in add_login_log_dao
+    db.commit()
+    │  └ <function Session.commit at 0x000001AF9116AE50>
+    └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2017, in commit
+    trans.commit(_to_root=True)
+    │     └ <function SessionTransaction.commit at 0x000001AF9116A0D0>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC0F9900>
+
+  File "<string>", line 2, in commit
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {'_to_root': True}
+                │  │      └ ()
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC0F9900>
+                └ <function SessionTransaction.commit at 0x000001AF9116A040>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1302, in commit
+    self._prepare_impl()
+    │    └ <function SessionTransaction._prepare_impl at 0x000001AF91164F70>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC0F9900>
+
+  File "<string>", line 2, in _prepare_impl
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {}
+                │  │      └ ()
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC0F9900>
+                └ <function SessionTransaction._prepare_impl at 0x000001AF91164E50>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1277, in _prepare_impl
+    self.session.flush()
+    │    │       └ <function Session.flush at 0x000001AF9116FC10>
+    │    └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC0F9900>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4341, in flush
+    self._flush(objects)
+    │    │      └ None
+    │    └ <function Session._flush at 0x000001AF9116FDC0>
+    └ <sqlalchemy.orm.session.Session object at 0x000001AFABFA1550>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4477, in _flush
+    transaction.rollback(_capture_exception=True)
+    │           └ <function SessionTransaction.rollback at 0x000001AF9116A310>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA0D80>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFAC434BC0>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4437, in _flush
+    flush_context.execute()
+    │             └ <function UOWTransaction.execute at 0x000001AF91152EE0>
+    └ <sqlalchemy.orm.unitofwork.UOWTransaction object at 0x000001AFAC10D1C0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    │   │       └ <sqlalchemy.orm.unitofwork.UOWTransaction object at 0x000001AFAC10D1C0>
+    │   └ <function SaveUpdateAll.execute at 0x000001AF9113D820>
+    └ SaveUpdateAll(Mapper[SysLogininfor(sys_logininfor)])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    │    │         │               └ <function save_obj at 0x000001AF91130F70>
+    │    │         └ <module 'sqlalchemy.orm.persistence' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\...
+    │    └ <module 'sqlalchemy.util.preloaded' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\s...
+    └ <module 'sqlalchemy.util' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\sqlalchemy\...
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 60, in save_obj
+    for (
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            └ <function _connections_for_states at 0x000001AF9113FA60>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 │              │           │          └ <Mapper at 0x1afaa24db50; SysLogininfor>
+                 │              │           └ <function SessionTransaction.connection at 0x000001AF91164790>
+                 │              └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA0D80>
+                 └ <sqlalchemy.orm.unitofwork.UOWTransaction object at 0x000001AFAC10D1C0>
+
+  File "<string>", line 2, in connection
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {'execution_options': None}
+                │  │      └ (<Mapper at 0x1afaa24db50; SysLogininfor>,)
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA0D80>
+                └ <function SessionTransaction.connection at 0x000001AF91164670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1039, in connection
+    return self._connection_for_bind(bind, execution_options)
+           │    │                    │     └ None
+           │    │                    └ Engine(sqlite:////opt/bbms/db/web.db)
+           │    └ <function SessionTransaction._connection_for_bind at 0x000001AF91164D30>
+           └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA0D80>
+
+  File "<string>", line 2, in _connection_for_bind
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {}
+                │  │      └ (Engine(sqlite:////opt/bbms/db/web.db), None)
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA0D80>
+                └ <function SessionTransaction._connection_for_bind at 0x000001AF91164C10>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1175, in _connection_for_bind
+    conn = self._parent._connection_for_bind(
+           │    │       └ <function SessionTransaction._connection_for_bind at 0x000001AF91164D30>
+           │    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC0F9900>
+           └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA0D80>
+
+  File "<string>", line 2, in _connection_for_bind
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {}
+                │  │      └ (Engine(sqlite:////opt/bbms/db/web.db), None)
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC0F9900>
+                └ <function SessionTransaction._connection_for_bind at 0x000001AF91164C10>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           │    └ <function Engine.connect at 0x000001AF90DF03A0>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3276, in connect
+    return self._connection_cls(self)
+           │    │               └ Engine(sqlite:////opt/bbms/db/web.db)
+           │    └ <class 'sqlalchemy.engine.base.Connection'>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 148, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    │          └ <classmethod object at 0x000001AF9090DBE0>
+    └ <class 'sqlalchemy.engine.base.Connection'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ OperationalError('unable to open database file')
+          │                    │              └ (<class 'sqlite3.OperationalError'>, OperationalError('unable to open database file'), <traceback object at 0x000001AFABF96340>)
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+    │                        │      └ <function Engine.raw_connection at 0x000001AF90DF0430>
+    │                        └ Engine(sqlite:////opt/bbms/db/web.db)
+    └ <sqlalchemy.engine.base.Connection object at 0x000001AFAC10D220>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+           │    │    └ <function Pool.connect at 0x000001AF9098F790>
+           │    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           │                │         └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           │                └ <classmethod object at 0x000001AF90988EB0>
+           └ <class 'sqlalchemy.pool.base._ConnectionFairy'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            │                 │        └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+            │                 └ <classmethod object at 0x000001AF90988AC0>
+            └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          │    └ <function NullPool._do_get at 0x000001AF909B0550>
+          └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 308, in _do_get
+    return self._create_connection()
+           │    └ <function Pool._create_connection at 0x000001AF9098F550>
+           └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           │                 └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFABF8B460>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+    │    │      └ <function Logger.debug at 0x000001AF8BE269D0>
+    │    └ <Logger sqlalchemy.pool.impl.NullPool (WARNING)>
+    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFABF966C0>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+    │    │                               │    │               └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFABF8B460>
+    │    │                               │    └ <function create_engine.<locals>.connect at 0x000001AF91246820>
+    │    │                               └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+    │    └ <member 'dbapi_connection' of '_ConnectionRecord' objects>
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFABF8B460>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           │       │        │        └ {'check_same_thread': False}
+           │       │        └ ['C:\\opt\\bbms\\db\\web.db']
+           │       └ <function DefaultDialect.connect at 0x000001AF90EA6670>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           │    │            │        │        └ {'check_same_thread': False}
+           │    │            │        └ ('C:\\opt\\bbms\\db\\web.db',)
+           │    │            └ <built-in function connect>
+           │    └ <module 'sqlite3.dbapi2' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\sqlite3\\dbapi2.py'>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-27 17:20:46.108 | ERROR    | module_admin.annotation.log_annotation:wrapper:127 - (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+    │                        │      └ <function Engine.raw_connection at 0x000001AF90DF0430>
+    │                        └ Engine(sqlite:////opt/bbms/db/web.db)
+    └ <sqlalchemy.engine.base.Connection object at 0x000001AFAC491C40>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+           │    │    └ <function Pool.connect at 0x000001AF9098F790>
+           │    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           │                │         └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           │                └ <classmethod object at 0x000001AF90988EB0>
+           └ <class 'sqlalchemy.pool.base._ConnectionFairy'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            │                 │        └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+            │                 └ <classmethod object at 0x000001AF90988AC0>
+            └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          │    └ <function NullPool._do_get at 0x000001AF909B0550>
+          └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 308, in _do_get
+    return self._create_connection()
+           │    └ <function Pool._create_connection at 0x000001AF9098F550>
+           └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           │                 └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2FB700>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+    │    │      └ <function Logger.debug at 0x000001AF8BE269D0>
+    │    └ <Logger sqlalchemy.pool.impl.NullPool (WARNING)>
+    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFAC429D80>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+    │    │                               │    │               └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2FB700>
+    │    │                               │    └ <function create_engine.<locals>.connect at 0x000001AF91246820>
+    │    │                               └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+    │    └ <member 'dbapi_connection' of '_ConnectionRecord' objects>
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2FB700>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           │       │        │        └ {'check_same_thread': False}
+           │       │        └ ['C:\\opt\\bbms\\db\\web.db']
+           │       └ <function DefaultDialect.connect at 0x000001AF90EA6670>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           │    │            │        │        └ {'check_same_thread': False}
+           │    │            │        └ ('C:\\opt\\bbms\\db\\web.db',)
+           │    │            └ <built-in function connect>
+           │    └ <module 'sqlite3.dbapi2' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\sqlite3\\dbapi2.py'>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+sqlite3.OperationalError: unable to open database file
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x000001AF8DD829D0>
+    └ <module 'uvicorn' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\uvicorn\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x000001AF8DD82310>
+    └ <uvicorn.server.Server object at 0x000001AF8BCCE3A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000001AF8DD823A0>
+           │       │   └ <uvicorn.server.Server object at 0x000001AF8BCCE3A0>
+           │       └ <function run at 0x000001AF8D98A790>
+           └ <module 'asyncio' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x000001AFABCD37C0>
+           │    └ <function BaseEventLoop.run_until_complete at 0x000001AF8D986A60>
+           └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 603, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001AF8DA44160>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001AF8D98A550>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001AF8C13CAF0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC4915B0>(<Future finis...01AFAC10DD60>>)>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC4915B0>(<Future finis...01AFAC10DD60>>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC4915B0>(<Future finis...01AFAC10DD60>>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC4915B0>(<Future finis...01AFAC10DD60>>)>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001AFABE81D90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAC...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x000001AF8BCCE100>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001AFABE81D90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAC...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAC...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001AFABF8C280>
+          └ <fastapi.applications.FastAPI object at 0x000001AF8BCCE100>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001AFAC1D5670>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x000001AFABF8C220>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001AFABF8C280>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001AFAC1D5670>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFAC10DBE0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x000001AF8F5588B0>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFAC10DBE0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFAC10DBE0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'x-forwarded-host': 'localhost', 'x-forwarded-proto': 'http', 'x-forwarded-port': '80', 'x-forwarded-for': '127.0.0....
+          │    │               │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x000001AFAC10DBE0>>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001AF8F541700>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001AFABF8C190>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001AFAC10DE80>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001AFABF8C190>
+          └ <function wrap_app_handling_exceptions at 0x000001AF8F1D7670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>>
+          └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │     └ <function Route.handle at 0x000001AF8F370B80>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function request_response.<locals>.app at 0x000001AFAAAA0700>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001AFAC10D610>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001AFAC47A310>
+          └ <function wrap_app_handling_exceptions at 0x000001AF8F1D7670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A3A0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001AFAC47A310>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001AFAC10D610>
+                     └ <function get_request_handler.<locals>.app at 0x000001AFAAAA08B0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001AF8F374790>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'form_data': <module_admin.service.login_service.CustomOAuth2PasswordRequestForm object at 0x000001AFABFA14F0>, 'query_db': ...
+                 │         └ <function login at 0x000001AFAA3AFC10>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[], dependencies=[Dependant(path_p...
+
+> File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\annotation\log_annotation.py", line 119, in wrapper
+    result = await func(*args, **kwargs)
+                   │     │       └ {'form_data': <module_admin.service.login_service.CustomOAuth2PasswordRequestForm object at 0x000001AFABFA14F0>, 'query_db': ...
+                   │     └ ()
+                   └ <function login at 0x000001AFAA3AFCA0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\controller\login_controller.py", line 37, in login
+    result = await LoginService.authenticate_user(request, query_db, user)
+                   │            │                 │        │         └ UserLogin(user_name='admin', password='admin123', code='', uuid='', login_info={'ipaddr': '127.0.0.1', 'loginLocation': '内网IP...
+                   │            │                 │        └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+                   │            │                 └ <starlette.requests.Request object at 0x000001AFAC10D610>
+                   │            └ <classmethod object at 0x000001AFA9EA2EE0>
+                   └ <class 'module_admin.service.login_service.LoginService'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\service\login_service.py", line 148, in authenticate_user
+    user = login_by_account(query_db, login_user.user_name)
+           │                │         │          └ 'admin'
+           │                │         └ UserLogin(user_name='admin', password='admin123', code='', uuid='', login_info={'ipaddr': '127.0.0.1', 'loginLocation': '内网IP...
+           │                └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+           └ <function login_by_account at 0x000001AF9129AAF0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\dao\login_dao.py", line 27, in login_by_account
+    user = query.first()
+           │     └ <function Query.first at 0x000001AF910E33A0>
+           └ <sqlalchemy.orm.query.Query object at 0x000001AFAC491910>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2728, in first
+    return self.limit(1)._iter().first()  # type: ignore
+           │    └ <function Query.limit at 0x000001AF910E0B80>
+           └ <sqlalchemy.orm.query.Query object at 0x000001AFAC491910>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\query.py", line 2827, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+            │                  │    │      │      │    │       └ <function Session.execute at 0x000001AF9116D160>
+            │                  │    │      │      │    └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+            │                  │    │      │      └ <sqlalchemy.orm.query.Query object at 0x000001AFAC491CA0>
+            │                  │    │      └ ~_T
+            │                  │    └ <class 'sqlalchemy.engine.result.Result'>
+            │                  └ ~_T
+            └ typing.Union
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2351, in execute
+    return self._execute_internal(
+           │    └ <function Session._execute_internal at 0x000001AF9116D0D0>
+           └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2226, in _execute_internal
+    conn = self._connection_for_bind(bind)
+           │    │                    └ Engine(sqlite:////opt/bbms/db/web.db)
+           │    └ <function Session._connection_for_bind at 0x000001AF9116D040>
+           └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2095, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+           │     │                    │       └ None
+           │     │                    └ Engine(sqlite:////opt/bbms/db/web.db)
+           │     └ <function SessionTransaction._connection_for_bind at 0x000001AF91164D30>
+           └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA6300>
+
+  File "<string>", line 2, in _connection_for_bind
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {}
+                │  │      └ (Engine(sqlite:////opt/bbms/db/web.db), None)
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA6300>
+                └ <function SessionTransaction._connection_for_bind at 0x000001AF91164C10>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           │    └ <function Engine.connect at 0x000001AF90DF03A0>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3276, in connect
+    return self._connection_cls(self)
+           │    │               └ Engine(sqlite:////opt/bbms/db/web.db)
+           │    └ <class 'sqlalchemy.engine.base.Connection'>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 148, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    │          └ <classmethod object at 0x000001AF9090DBE0>
+    └ <class 'sqlalchemy.engine.base.Connection'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ OperationalError('unable to open database file')
+          │                    │              └ (<class 'sqlite3.OperationalError'>, OperationalError('unable to open database file'), <traceback object at 0x000001AFAC4891C0>)
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+    │                        │      └ <function Engine.raw_connection at 0x000001AF90DF0430>
+    │                        └ Engine(sqlite:////opt/bbms/db/web.db)
+    └ <sqlalchemy.engine.base.Connection object at 0x000001AFAC491C40>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+           │    │    └ <function Pool.connect at 0x000001AF9098F790>
+           │    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           │                │         └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           │                └ <classmethod object at 0x000001AF90988EB0>
+           └ <class 'sqlalchemy.pool.base._ConnectionFairy'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            │                 │        └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+            │                 └ <classmethod object at 0x000001AF90988AC0>
+            └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          │    └ <function NullPool._do_get at 0x000001AF909B0550>
+          └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 308, in _do_get
+    return self._create_connection()
+           │    └ <function Pool._create_connection at 0x000001AF9098F550>
+           └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           │                 └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2FB700>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+    │    │      └ <function Logger.debug at 0x000001AF8BE269D0>
+    │    └ <Logger sqlalchemy.pool.impl.NullPool (WARNING)>
+    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFAC429D80>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+    │    │                               │    │               └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2FB700>
+    │    │                               │    └ <function create_engine.<locals>.connect at 0x000001AF91246820>
+    │    │                               └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+    │    └ <member 'dbapi_connection' of '_ConnectionRecord' objects>
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2FB700>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           │       │        │        └ {'check_same_thread': False}
+           │       │        └ ['C:\\opt\\bbms\\db\\web.db']
+           │       └ <function DefaultDialect.connect at 0x000001AF90EA6670>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           │    │            │        │        └ {'check_same_thread': False}
+           │    │            │        └ ('C:\\opt\\bbms\\db\\web.db',)
+           │    │            └ <built-in function connect>
+           │    └ <module 'sqlite3.dbapi2' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\sqlite3\\dbapi2.py'>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-27 17:20:46.148 | ERROR    | exceptions.handle:exception_handler:70 - (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+    │                        │      └ <function Engine.raw_connection at 0x000001AF90DF0430>
+    │                        └ Engine(sqlite:////opt/bbms/db/web.db)
+    └ <sqlalchemy.engine.base.Connection object at 0x000001AFAC48BA60>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+           │    │    └ <function Pool.connect at 0x000001AF9098F790>
+           │    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           │                │         └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           │                └ <classmethod object at 0x000001AF90988EB0>
+           └ <class 'sqlalchemy.pool.base._ConnectionFairy'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            │                 │        └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+            │                 └ <classmethod object at 0x000001AF90988AC0>
+            └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          │    └ <function NullPool._do_get at 0x000001AF909B0550>
+          └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 308, in _do_get
+    return self._create_connection()
+           │    └ <function Pool._create_connection at 0x000001AF9098F550>
+           └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           │                 └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2098E0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+    │    │      └ <function Logger.debug at 0x000001AF8BE269D0>
+    │    └ <Logger sqlalchemy.pool.impl.NullPool (WARNING)>
+    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFAC4876C0>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+    │    │                               │    │               └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2098E0>
+    │    │                               │    └ <function create_engine.<locals>.connect at 0x000001AF91246820>
+    │    │                               └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+    │    └ <member 'dbapi_connection' of '_ConnectionRecord' objects>
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2098E0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           │       │        │        └ {'check_same_thread': False}
+           │       │        └ ['C:\\opt\\bbms\\db\\web.db']
+           │       └ <function DefaultDialect.connect at 0x000001AF90EA6670>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           │    │            │        │        └ {'check_same_thread': False}
+           │    │            │        └ ('C:\\opt\\bbms\\db\\web.db',)
+           │    │            └ <built-in function connect>
+           │    └ <module 'sqlite3.dbapi2' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\sqlite3\\dbapi2.py'>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+sqlite3.OperationalError: unable to open database file
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x000001AF8DD829D0>
+    └ <module 'uvicorn' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\uvicorn\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x000001AF8DD82310>
+    └ <uvicorn.server.Server object at 0x000001AF8BCCE3A0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x000001AF8DD823A0>
+           │       │   └ <uvicorn.server.Server object at 0x000001AF8BCCE3A0>
+           │       └ <function run at 0x000001AF8D98A790>
+           └ <module 'asyncio' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\asyncio\\__init__.py'>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x000001AFABCD37C0>
+           │    └ <function BaseEventLoop.run_until_complete at 0x000001AF8D986A60>
+           └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 603, in run_until_complete
+    self.run_forever()
+    │    └ <function ProactorEventLoop.run_forever at 0x000001AF8DA44160>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 570, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001AF8D98A550>
+    └ <ProactorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\base_events.py", line 1859, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001AF8C13CAF0>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC48BAC0>(<Future finished result=False>)>
+
+  File "C:\Users\WRICKY-WU\AppData\Local\Programs\Python\Python38\lib\asyncio\events.py", line 81, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC48BAC0>(<Future finished result=False>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC48BAC0>(<Future finished result=False>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle <TaskWakeupMethWrapper object at 0x000001AFAC48BAC0>(<Future finished result=False>)>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\protocols\http\httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001AFABE81D90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAC...
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x000001AF8BCCE100>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x000001AFABE81D90>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAC...
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001AFAC...
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001AFABF8C280>
+          └ <fastapi.applications.FastAPI object at 0x000001AF8BCCE100>
+
+> File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001AFAC1D5670>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x000001AFABF8C220>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x000001AFABF8C280>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x000001AFAC1D5670>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFAC10DBE0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x000001AF8F5588B0>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFAC10DBE0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x000001AFAC10DBE0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'x-forwarded-host': 'localhost', 'x-forwarded-proto': 'http', 'x-forwarded-port': '80', 'x-forwarded-for': '127.0.0....
+          │    │               │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x000001AFAC10DBE0>>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001AF8F541700>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001AFABF8C190>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001AFABF8C1F0...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001AFAC10DE80>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001AFABF8C190>
+          └ <function wrap_app_handling_exceptions at 0x000001AF8F1D7670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>>
+          └ <fastapi.routing.APIRouter object at 0x000001AFAAA824C0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │     └ <function Route.handle at 0x000001AF8F370B80>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │    └ <function request_response.<locals>.app at 0x000001AFAAAA0700>
+          └ APIRoute(path='/login', name='login', methods=['POST'])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A4C0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001AFAC10D610>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001AFAC47A310>
+          └ <function wrap_app_handling_exceptions at 0x000001AF8F1D7670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 62, in wrapped_app
+    raise exc
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001AFAC47A3A0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x000001A...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9102), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001AFAC47A310>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001AFAC10D610>
+                     └ <function get_request_handler.<locals>.app at 0x000001AFAAAA08B0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001AF8F374790>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\fastapi\routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'form_data': <module_admin.service.login_service.CustomOAuth2PasswordRequestForm object at 0x000001AFABFA14F0>, 'query_db': ...
+                 │         └ <function login at 0x000001AFAA3AFC10>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[], dependencies=[Dependant(path_p...
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\annotation\log_annotation.py", line 174, in wrapper
+    await LoginLogService.add_login_log_services(query_db, LogininforModel(**login_log))
+          │               │                      │         │                 └ {'ipaddr': '127.0.0.1', 'loginLocation': '内网IP', 'browser': 'Chrome 147', 'os': 'Windows 10', 'loginTime': datetime.datetime(...
+          │               │                      │         └ <class 'module_admin.entity.vo.log_vo.LogininforModel'>
+          │               │                      └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+          │               └ <classmethod object at 0x000001AFAA314520>
+          └ <class 'module_admin.service.log_service.LoginLogService'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\service\log_service.py", line 185, in add_login_log_services
+    raise e
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\service\log_service.py", line 180, in add_login_log_services
+    await LoginLogDao.add_login_log_dao(query_db, page_object)
+          │           │                 │         └ LogininforModel(info_id=None, user_name='admin', ipaddr='127.0.0.1', login_location='内网IP', browser='Chrome 147', os='Windows...
+          │           │                 └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+          │           └ <classmethod object at 0x000001AFAA284FA0>
+          └ <class 'module_admin.dao.log_dao.LoginLogDao'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\module_admin\dao\log_dao.py", line 148, in add_login_log_dao
+    db.commit()
+    │  └ <function Session.commit at 0x000001AF9116AE50>
+    └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 2017, in commit
+    trans.commit(_to_root=True)
+    │     └ <function SessionTransaction.commit at 0x000001AF9116A0D0>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA6300>
+
+  File "<string>", line 2, in commit
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {'_to_root': True}
+                │  │      └ ()
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA6300>
+                └ <function SessionTransaction.commit at 0x000001AF9116A040>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1302, in commit
+    self._prepare_impl()
+    │    └ <function SessionTransaction._prepare_impl at 0x000001AF91164F70>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA6300>
+
+  File "<string>", line 2, in _prepare_impl
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {}
+                │  │      └ ()
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA6300>
+                └ <function SessionTransaction._prepare_impl at 0x000001AF91164E50>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1277, in _prepare_impl
+    self.session.flush()
+    │    │       └ <function Session.flush at 0x000001AF9116FC10>
+    │    └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA6300>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4341, in flush
+    self._flush(objects)
+    │    │      └ None
+    │    └ <function Session._flush at 0x000001AF9116FDC0>
+    └ <sqlalchemy.orm.session.Session object at 0x000001AFAC10DD60>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4477, in _flush
+    transaction.rollback(_capture_exception=True)
+    │           └ <function SessionTransaction.rollback at 0x000001AF9116A310>
+    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC49AD80>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFAC4A72C0>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 4437, in _flush
+    flush_context.execute()
+    │             └ <function UOWTransaction.execute at 0x000001AF91152EE0>
+    └ <sqlalchemy.orm.unitofwork.UOWTransaction object at 0x000001AFAC48BAF0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+    │   │       └ <sqlalchemy.orm.unitofwork.UOWTransaction object at 0x000001AFAC48BAF0>
+    │   └ <function SaveUpdateAll.execute at 0x000001AF9113D820>
+    └ SaveUpdateAll(Mapper[SysLogininfor(sys_logininfor)])
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+    │    │         │               └ <function save_obj at 0x000001AF91130F70>
+    │    │         └ <module 'sqlalchemy.orm.persistence' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\...
+    │    └ <module 'sqlalchemy.util.preloaded' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\s...
+    └ <module 'sqlalchemy.util' from 'C:\\Users\\WRICKY-WU\\Documents\\bms\\web\\web-backend\\venv\\lib\\site-packages\\sqlalchemy\...
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 60, in save_obj
+    for (
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 223, in _organize_states_for_save
+    for state, dict_, mapper, connection in _connections_for_states(
+                                            └ <function _connections_for_states at 0x000001AF9113FA60>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\persistence.py", line 1753, in _connections_for_states
+    connection = uowtransaction.transaction.connection(base_mapper)
+                 │              │           │          └ <Mapper at 0x1afaa24db50; SysLogininfor>
+                 │              │           └ <function SessionTransaction.connection at 0x000001AF91164790>
+                 │              └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC49AD80>
+                 └ <sqlalchemy.orm.unitofwork.UOWTransaction object at 0x000001AFAC48BAF0>
+
+  File "<string>", line 2, in connection
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {'execution_options': None}
+                │  │      └ (<Mapper at 0x1afaa24db50; SysLogininfor>,)
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC49AD80>
+                └ <function SessionTransaction.connection at 0x000001AF91164670>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1039, in connection
+    return self._connection_for_bind(bind, execution_options)
+           │    │                    │     └ None
+           │    │                    └ Engine(sqlite:////opt/bbms/db/web.db)
+           │    └ <function SessionTransaction._connection_for_bind at 0x000001AF91164D30>
+           └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC49AD80>
+
+  File "<string>", line 2, in _connection_for_bind
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {}
+                │  │      └ (Engine(sqlite:////opt/bbms/db/web.db), None)
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC49AD80>
+                └ <function SessionTransaction._connection_for_bind at 0x000001AF91164C10>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1175, in _connection_for_bind
+    conn = self._parent._connection_for_bind(
+           │    │       └ <function SessionTransaction._connection_for_bind at 0x000001AF91164D30>
+           │    └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA6300>
+           └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFAC49AD80>
+
+  File "<string>", line 2, in _connection_for_bind
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                │  │      │      └ {}
+                │  │      └ (Engine(sqlite:////opt/bbms/db/web.db), None)
+                │  └ <sqlalchemy.orm.session.SessionTransaction object at 0x000001AFABFA6300>
+                └ <function SessionTransaction._connection_for_bind at 0x000001AF91164C10>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\orm\session.py", line 1189, in _connection_for_bind
+    conn = bind.connect()
+           │    └ <function Engine.connect at 0x000001AF90DF03A0>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3276, in connect
+    return self._connection_cls(self)
+           │    │               └ Engine(sqlite:////opt/bbms/db/web.db)
+           │    └ <class 'sqlalchemy.engine.base.Connection'>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 148, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+    │          └ <classmethod object at 0x000001AF9090DBE0>
+    └ <class 'sqlalchemy.engine.base.Connection'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 2440, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ OperationalError('unable to open database file')
+          │                    │              └ (<class 'sqlite3.OperationalError'>, OperationalError('unable to open database file'), <traceback object at 0x000001AFAC4A0100>)
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 146, in __init__
+    self._dbapi_connection = engine.raw_connection()
+    │                        │      └ <function Engine.raw_connection at 0x000001AF90DF0430>
+    │                        └ Engine(sqlite:////opt/bbms/db/web.db)
+    └ <sqlalchemy.engine.base.Connection object at 0x000001AFAC48BA60>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\base.py", line 3300, in raw_connection
+    return self.pool.connect()
+           │    │    └ <function Pool.connect at 0x000001AF9098F790>
+           │    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ Engine(sqlite:////opt/bbms/db/web.db)
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 449, in connect
+    return _ConnectionFairy._checkout(self)
+           │                │         └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           │                └ <classmethod object at 0x000001AF90988EB0>
+           └ <class 'sqlalchemy.pool.base._ConnectionFairy'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 1263, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+            │                 │        └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+            │                 └ <classmethod object at 0x000001AF90988AC0>
+            └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 712, in checkout
+    rec = pool._do_get()
+          │    └ <function NullPool._do_get at 0x000001AF909B0550>
+          └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\impl.py", line 308, in _do_get
+    return self._create_connection()
+           │    └ <function Pool._create_connection at 0x000001AF9098F550>
+           └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 390, in _create_connection
+    return _ConnectionRecord(self)
+           │                 └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+           └ <class 'sqlalchemy.pool.base._ConnectionRecord'>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 674, in __init__
+    self.__connect()
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2098E0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 901, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+    │    │      └ <function Logger.debug at 0x000001AF8BE269D0>
+    │    └ <Logger sqlalchemy.pool.impl.NullPool (WARNING)>
+    └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+          │         │              └ <traceback object at 0x000001AFAC4876C0>
+          │         └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('unable to open database file')
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\pool\base.py", line 896, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+    │    │                               │    │               └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2098E0>
+    │    │                               │    └ <function create_engine.<locals>.connect at 0x000001AF91246820>
+    │    │                               └ <sqlalchemy.pool.impl.NullPool object at 0x000001AF91242490>
+    │    └ <member 'dbapi_connection' of '_ConnectionRecord' objects>
+    └ <sqlalchemy.pool.base._ConnectionRecord object at 0x000001AFAC2098E0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\create.py", line 643, in connect
+    return dialect.connect(*cargs, **cparams)
+           │       │        │        └ {'check_same_thread': False}
+           │       │        └ ['C:\\opt\\bbms\\db\\web.db']
+           │       └ <function DefaultDialect.connect at 0x000001AF90EA6670>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+  File "C:\Users\WRICKY-WU\Documents\bms\web\web-backend\venv\lib\site-packages\sqlalchemy\engine\default.py", line 620, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+           │    │            │        │        └ {'check_same_thread': False}
+           │    │            │        └ ('C:\\opt\\bbms\\db\\web.db',)
+           │    │            └ <built-in function connect>
+           │    └ <module 'sqlite3.dbapi2' from 'C:\\Users\\WRICKY-WU\\AppData\\Local\\Programs\\Python\\Python38\\lib\\sqlite3\\dbapi2.py'>
+           └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x000001AF912423D0>
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-04-27 17:22:04.879 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-04-27 17:22:04.879 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-04-27 17:38:04.679 | INFO     | module_admin.controller.login_controller:login:58 - 登录成功
+2026-04-27 17:38:04.737 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-04-27 17:38:04.764 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功

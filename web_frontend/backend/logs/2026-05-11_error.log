@@ -1,0 +1,1692 @@
+2026-05-11 15:25:52.096 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:25:52.102 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:25:53.279 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:25:53.285 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:26:28.261 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:26:28.272 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:26:58.862 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:26:58.868 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:27:01.678 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 15:27:01.783 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 15:27:03.109 | INFO     | module_device.controller.device_controller:get_device_list:33 - 获取成功
+2026-05-11 15:27:05.042 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 15:27:05.119 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 15:27:06.727 | INFO     | module_device.controller.device_controller:get_device_list:33 - 获取成功
+2026-05-11 15:27:16.160 | ERROR    | exceptions.handle:exception_handler:70 - Excel file format cannot be determined, you must specify an engine manually.
+Traceback (most recent call last):
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_device/service/excel_service.py", line 55, in _read_excel_from_upload
+    return pd.read_excel(io.BytesIO(contents), engine="openpyxl", **kwargs)
+           │  │          │  │       │                               └ {}
+           │  │          │  │       └ b'\xef\xbb\xbfCode,Bit Number,Default Value,Name,Ename,Endian,Min Value,Data Type,Precision,Max Value,Attribute,Ratio,Unit,Fu...
+           │  │          │  └ <class '_io.BytesIO'>
+           │  │          └ <module 'io' from '/usr/lib/python3.8/io.py'>
+           │  └ <function read_excel at 0x7f977a6820>
+           └ <module 'pandas' from '/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/pandas/__init__.py'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/pandas/io/excel/_base.py", line 478, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+         │         │                   │                       └ 'openpyxl'
+         │         │                   └ None
+         │         └ <_io.BytesIO object at 0x7faa32c7c0>
+         └ <class 'pandas.io.excel._base.ExcelFile'>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/pandas/io/excel/_base.py", line 1513, in __init__
+    self._reader = self._engines[engine](self._io, storage_options=storage_options)
+    │              │    │        │       │    │                    └ None
+    │              │    │        │       │    └ <_io.BytesIO object at 0x7faa32c7c0>
+    │              │    │        │       └ <pandas.io.excel._base.ExcelFile object at 0x7f92f17d30>
+    │              │    │        └ 'openpyxl'
+    │              │    └ {'xlrd': <class 'pandas.io.excel._xlrd.XlrdReader'>, 'openpyxl': <class 'pandas.io.excel._openpyxl.OpenpyxlReader'>, 'odf': <...
+    │              └ <pandas.io.excel._base.ExcelFile object at 0x7f92f17d30>
+    └ <pandas.io.excel._base.ExcelFile object at 0x7f92f17d30>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/pandas/io/excel/_openpyxl.py", line 549, in __init__
+    super().__init__(filepath_or_buffer, storage_options=storage_options)
+                     │                                   └ None
+                     └ <_io.BytesIO object at 0x7faa32c7c0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/pandas/io/excel/_base.py", line 540, in __init__
+    self.book = self.load_workbook(self.handles.handle)
+    │           │    │             │    │       └ <_io.BytesIO object at 0x7faa32c7c0>
+    │           │    │             │    └ IOHandles(handle=<_io.BytesIO object at 0x7faa32c7c0>, compression={'method': None}, created_handles=[], is_wrapped=False)
+    │           │    │             └ <pandas.io.excel._openpyxl.OpenpyxlReader object at 0x7f92f17d00>
+    │           │    └ <function OpenpyxlReader.load_workbook at 0x7f9763a040>
+    │           └ <pandas.io.excel._openpyxl.OpenpyxlReader object at 0x7f92f17d00>
+    └ <pandas.io.excel._openpyxl.OpenpyxlReader object at 0x7f92f17d00>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/pandas/io/excel/_openpyxl.py", line 560, in load_workbook
+    return load_workbook(
+           └ <function load_workbook at 0x7f9713f310>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/openpyxl/reader/excel.py", line 346, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             │           │         │          └ False
+             │           │         └ True
+             │           └ <_io.BytesIO object at 0x7faa32c7c0>
+             └ <class 'openpyxl.reader.excel.ExcelReader'>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/openpyxl/reader/excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+    │              │                 └ <_io.BytesIO object at 0x7faa32c7c0>
+    │              └ <function _validate_archive at 0x7f971c4a60>
+    └ <openpyxl.reader.excel.ExcelReader object at 0x7f92f17430>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/openpyxl/reader/excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+              │       └ <_io.BytesIO object at 0x7faa32c7c0>
+              └ <class 'zipfile.ZipFile'>
+  File "/usr/lib/python3.8/zipfile.py", line 1271, in __init__
+    self._RealGetContents()
+    │    └ <function ZipFile._RealGetContents at 0x7fa9731700>
+    └ <zipfile.ZipFile [closed]>
+  File "/usr/lib/python3.8/zipfile.py", line 1338, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+          └ <class 'zipfile.BadZipFile'>
+
+zipfile.BadZipFile: File is not a zip file
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x7faad20310>
+    └ <module 'uvicorn' from '/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/__init__.py'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x7faacf34c0>
+    └ <uvicorn.server.Server object at 0x7f95c97bb0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7faacf3550>
+           │       │   └ <uvicorn.server.Server object at 0x7f95c97bb0>
+           │       └ <function run at 0x7fab712790>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f95db1bc0>
+           │    └ <cyfunction Loop.run_until_complete at 0x7f95ccdf40>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f95ccc7f0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961be0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x7fab7a29a0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f95ccc7f0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961be0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961be0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f959b7d00>
+          └ <fastapi.applications.FastAPI object at 0x7fab7a29a0>
+> File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f9388db80>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x7f959b7fa0>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f959b7d00>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f9388db80>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f95961b80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x7fa99b41f0>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x7f95961b80>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x7f959b7f70>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f95961b80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'x-forwarded-host': 'localhost:9527', 'x-forwarded-proto': 'http', 'x-forwarded-port': '9527', 'x-forwarded-for': '1...
+          │    │               │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f95961b80>>
+          │    │               │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x7fa99a6160>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x7f959b7f70>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x7f959b7f70>>, se...
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f959b7f10>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x7f959b7f70>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x7f959b7f70>>, se...
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x7f959615b0>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x7f96146280>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f959b7f10>
+          └ <function wrap_app_handling_exceptions at 0x7faa019b80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f9388daf0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x7f96146280>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f9388daf0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x7f96146280>>
+          └ <fastapi.routing.APIRouter object at 0x7f96146280>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f9388daf0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │     └ <function Route.handle at 0x7faa087f70>
+          └ APIRoute(path='/device/import-points', name='batch_import_point', methods=['POST'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f9388daf0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <function request_response.<locals>.app at 0x7f960cc820>
+          └ APIRoute(path='/device/import-points', name='batch_import_point', methods=['POST'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f9388daf0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x7f95961940>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x7f9388da60>
+          └ <function wrap_app_handling_exceptions at 0x7faa019b80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f9388dc10>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f95961...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x7f9388da60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x7f95961940>
+                     └ <function get_request_handler.<locals>.app at 0x7f95f09280>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x7faa08fb80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'query_db': <sqlalchemy.orm.session.Session object at 0x7f9594ea60>, 'device_id': 1, 'file': UploadFile(filename='devConSelf...
+                 │         └ <function batch_import_point at 0x7f9630c280>
+                 └ Dependant(path_params=[], query_params=[ModelField(field_info=Query(PydanticUndefined), name='device_id', mode='validation')]...
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_device/controller/device_controller.py", line 126, in batch_import_point
+    batch_import_result = await ExcelService.batch_import_point_services(query_db, file, device_info.template_id, dev_dict)
+                                │            │                           │         │     │           │            └ {'protocol_type': 0, 'dev_type': 0}
+                                │            │                           │         │     │           └ 0
+                                │            │                           │         │     └ DeviceCreateUpdateModel(id=1, sn='LOCAL001', type=0, code=1, name='Local system', protocol_type=0, template_id=0, sort_order=...
+                                │            │                           │         └ UploadFile(filename='devConSelfInfoPoint.xlsx', size=15503, headers=Headers({'content-disposition': 'form-data; name="file"; ...
+                                │            │                           └ <sqlalchemy.orm.session.Session object at 0x7f9594ea60>
+                                │            └ <staticmethod object at 0x7f9644b790>
+                                └ <class 'module_device.service.excel_service.ExcelService'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_device/service/excel_service.py", line 142, in batch_import_point_services
+    df = ExcelService._read_excel_from_upload(contents, file.filename)
+         │            │                       │         │    └ 'devConSelfInfoPoint.xlsx'
+         │            │                       │         └ UploadFile(filename='devConSelfInfoPoint.xlsx', size=15503, headers=Headers({'content-disposition': 'form-data; name="file"; ...
+         │            │                       └ b'\xef\xbb\xbfCode,Bit Number,Default Value,Name,Ename,Endian,Min Value,Data Type,Precision,Max Value,Attribute,Ratio,Unit,Fu...
+         │            └ <classmethod object at 0x7f96440d60>
+         └ <class 'module_device.service.excel_service.ExcelService'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_device/service/excel_service.py", line 57, in _read_excel_from_upload
+    return pd.read_excel(io.BytesIO(contents), **kwargs)
+           │  │          │  │       │            └ {}
+           │  │          │  │       └ b'\xef\xbb\xbfCode,Bit Number,Default Value,Name,Ename,Endian,Min Value,Data Type,Precision,Max Value,Attribute,Ratio,Unit,Fu...
+           │  │          │  └ <class '_io.BytesIO'>
+           │  │          └ <module 'io' from '/usr/lib/python3.8/io.py'>
+           │  └ <function read_excel at 0x7f977a6820>
+           └ <module 'pandas' from '/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/pandas/__init__.py'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/pandas/io/excel/_base.py", line 478, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+         │         │                   │                       └ None
+         │         │                   └ None
+         │         └ <_io.BytesIO object at 0x7fa99e9f40>
+         └ <class 'pandas.io.excel._base.ExcelFile'>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/pandas/io/excel/_base.py", line 1500, in __init__
+    raise ValueError(
+
+ValueError: Excel file format cannot be determined, you must specify an engine manually.
+2026-05-11 15:27:27.619 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:27:27.624 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:27:31.896 | INFO     | module_device.controller.device_controller:export_device_list:184 - 导出成功
+2026-05-11 15:27:56.064 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:27:56.069 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:28:24.853 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:28:24.859 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:28:53.499 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:28:53.504 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:29:43.347 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:29:43.353 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:29:51.573 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:29:51.579 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:30:11.426 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 15:30:11.564 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 15:30:12.187 | INFO     | module_device.controller.device_controller:get_device_list:33 - 获取成功
+2026-05-11 15:30:56.234 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 15:30:56.339 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 15:30:56.871 | INFO     | module_device.controller.device_controller:get_device_list:33 - 获取成功
+2026-05-11 15:31:24.986 | INFO     | module_device.controller.device_controller:batch_import_point:127 - Import successful
+2026-05-11 15:33:57.537 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 15:33:57.654 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 15:33:58.736 | INFO     | module_device.controller.device_controller:get_device_list:33 - 获取成功
+2026-05-11 15:34:26.267 | INFO     | module_device.controller.device_controller:get_device_list:33 - 获取成功
+2026-05-11 15:34:26.374 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 15:34:28.781 | INFO     | module_device.controller.device_controller:get_device_list:33 - 获取成功
+2026-05-11 15:34:34.804 | INFO     | module_device.controller.device_controller:export_device_list:184 - 导出成功
+2026-05-11 15:35:33.066 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 15:35:33.128 | ERROR    | exceptions.handle:exception_handler:70 - (sqlite3.OperationalError) no such table: north_config
+[SQL: SELECT count(?) AS count_1 
+FROM (SELECT DISTINCT north_config.id AS id, north_config.name AS name, north_config.protocol_type AS protocol_type, north_config.config_type AS config_type, north_config.template_id AS template_id, north_config.remark AS remark 
+FROM north_config 
+WHERE 1 = 1 ORDER BY north_config.id) AS anon_1]
+[parameters: ('*',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x7f93abf4c0>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x7f936a81c0>
+    └ <sqlalchemy.engine.base.Connection object at 0x7f82ca83d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ('*',)
+    │      │       └ 'SELECT count(?) AS count_1 \nFROM (SELECT DISTINCT north_config.id AS id, north_config.name AS name, north_config.protocol_t...
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x7f82dc4f80>
+
+sqlite3.OperationalError: no such table: north_config
+
+
+The above exception was the direct cause of the following exception:
+
+
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x7f9abd8280>
+    └ <module 'uvicorn' from '/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/__init__.py'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x7f9abae430>
+    └ <uvicorn.server.Server object at 0x7f9b48ffd0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f9abae4c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f9b48ffd0>
+           │       └ <function run at 0x7f9b5d0700>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f85c8ac40>
+           │    └ <cyfunction Loop.run_until_complete at 0x7f85baef40>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f859491f0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb610>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x7f9b5ef0d0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f859491f0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb610>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb610>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f858646a0>
+          └ <fastapi.applications.FastAPI object at 0x7f9b5ef0d0>
+> File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f837569d0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x7f85864640>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f858646a0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f837569d0>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f82dcb6d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x7f99812160>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x7f82dcb6d0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x7f85864610>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f82dcb6d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f82dcb6d0>>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f858645b0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x7f85864610>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f82dcb6d0>>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x7f8580b130>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x7f86009190>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f858645b0>
+          └ <function wrap_app_handling_exceptions at 0x7f99e79af0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f83756940>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x7f86009190>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f83756940>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x7f86009190>>
+          └ <fastapi.routing.APIRouter object at 0x7f86009190>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f83756940>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │     └ <function Route.handle at 0x7f99ef1ee0>
+          └ APIRoute(path='/northbound/list', name='get_northbound_list', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f83756940>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <function request_response.<locals>.app at 0x7f85c1d4c0>
+          └ APIRoute(path='/northbound/list', name='get_northbound_list', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f83756940>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x7f82cbaa00>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x7f82de8af0>
+          └ <function wrap_app_handling_exceptions at 0x7f99e79af0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f857fd4c0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f82dcb...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x7f82de8af0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x7f82cbaa00>
+                     └ <function get_request_handler.<locals>.app at 0x7f85c1d430>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x7f99df9af0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/routing.py", line 212, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'config_page_query': NorthConfigPageQueryModel(page_num=1, page_size=1, name=None, protocol_type=None, template_id=None), 'q...
+                 │         └ <function get_northbound_list at 0x7f860f98b0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[], dependencies=[Dependant(path_p...
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_device/controller/northbound_controller.py", line 27, in get_northbound_list
+    config_page_query_result = await NorthboundService.get_northbound_config_list_services(query_db, config_page_query, is_page=True)
+                                     │                 │                                   │         └ NorthConfigPageQueryModel(page_num=1, page_size=1, name=None, protocol_type=None, template_id=None)
+                                     │                 │                                   └ <sqlalchemy.orm.session.Session object at 0x7f82cbaa90>
+                                     │                 └ <classmethod object at 0x7f861187c0>
+                                     └ <class 'module_device.service.northbound_service.NorthboundService'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_device/service/northbound_service.py", line 68, in get_northbound_config_list_services
+    config_list_result = await NorthboundDao.get_northbound_config_list(query_db, query_object, is_page)
+                               │             │                          │         │             └ True
+                               │             │                          │         └ NorthConfigPageQueryModel(page_num=1, page_size=1, name=None, protocol_type=None, template_id=None)
+                               │             │                          └ <sqlalchemy.orm.session.Session object at 0x7f82cbaa90>
+                               │             └ <classmethod object at 0x7f86118cd0>
+                               └ <class 'module_device.dao.northbound_dao.NorthboundDao'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_device/dao/northbound_dao.py", line 47, in get_northbound_config_list
+    config_list = await PageUtil.paginate(db, query, query_object.page_num, query_object.page_size, is_page)
+                        │        │        │   │      │            │         │            │          └ True
+                        │        │        │   │      │            │         │            └ 1
+                        │        │        │   │      │            │         └ NorthConfigPageQueryModel(page_num=1, page_size=1, name=None, protocol_type=None, template_id=None)
+                        │        │        │   │      │            └ 1
+                        │        │        │   │      └ NorthConfigPageQueryModel(page_num=1, page_size=1, name=None, protocol_type=None, template_id=None)
+                        │        │        │   └ <sqlalchemy.sql.selectable.Select object at 0x7f82ca1f10>
+                        │        │        └ <sqlalchemy.orm.session.Session object at 0x7f82cbaa90>
+                        │        └ <classmethod object at 0x7f9344c910>
+                        └ <class 'utils.page_util.PageUtil'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/utils/page_util.py", line 67, in paginate
+    total = (db.execute(select(func.count('*')).select_from(query.subquery()))).scalar()
+             │  │       │      │                            │     └ <function SelectBase.subquery at 0x7f93c09940>
+             │  │       │      │                            └ <sqlalchemy.sql.selectable.Select object at 0x7f82ca1f10>
+             │  │       │      └ <sqlalchemy.sql.functions._FunctionGenerator object at 0x7f93bdf970>
+             │  │       └ <function select at 0x7f93b95e50>
+             │  └ <function Session.execute at 0x7f93784f70>
+             └ <sqlalchemy.orm.session.Session object at 0x7f82cbaa90>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2351, in execute
+    return self._execute_internal(
+           │    └ <function Session._execute_internal at 0x7f93784ee0>
+           └ <sqlalchemy.orm.session.Session object at 0x7f82cbaa90>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/orm/session.py", line 2236, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                   │      │                 └ <classmethod object at 0x7f939173a0>
+                   │      └ <class 'sqlalchemy.orm.context.ORMSelectCompileState'>
+                   └ typing.Any
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/orm/context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             │    └ <function Connection.execute at 0x7f93b010d0>
+             └ <sqlalchemy.engine.base.Connection object at 0x7f82ca83d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           └ <bound method ClauseElement._execute_on_connection of <sqlalchemy.sql.selectable.Select object at 0x7f82ca1820>>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           │          └ <function Connection._execute_clauseelement at 0x7f93b013a0>
+           └ <sqlalchemy.engine.base.Connection object at 0x7f82ca83d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          │    └ <function Connection._execute_context at 0x7f93b01550>
+          └ <sqlalchemy.engine.base.Connection object at 0x7f82ca83d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           │    └ <function Connection._exec_single_context at 0x7f93b015e0>
+           └ <sqlalchemy.engine.base.Connection object at 0x7f82ca83d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+    │    └ <function Connection._handle_dbapi_exception at 0x7f93b01820>
+    └ <sqlalchemy.engine.base.Connection object at 0x7f82ca83d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 2353, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+          │                    │              │                 └ OperationalError('no such table: north_config')
+          │                    │              └ (<class 'sqlite3.OperationalError'>, OperationalError('no such table: north_config'), <traceback object at 0x7f82dbe4c0>)
+          │                    └ <method 'with_traceback' of 'BaseException' objects>
+          └ OperationalError('(sqlite3.OperationalError) no such table: north_config')
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+    │    │       └ <function DefaultDialect.do_execute at 0x7f93abf4c0>
+    │    └ <sqlalchemy.dialects.sqlite.pysqlite.SQLiteDialect_pysqlite object at 0x7f936a81c0>
+    └ <sqlalchemy.engine.base.Connection object at 0x7f82ca83d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+    │      │       │          └ ('*',)
+    │      │       └ 'SELECT count(?) AS count_1 \nFROM (SELECT DISTINCT north_config.id AS id, north_config.name AS name, north_config.protocol_t...
+    │      └ <method 'execute' of 'sqlite3.Cursor' objects>
+    └ <sqlite3.Cursor object at 0x7f82dc4f80>
+
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: north_config
+[SQL: SELECT count(?) AS count_1 
+FROM (SELECT DISTINCT north_config.id AS id, north_config.name AS name, north_config.protocol_type AS protocol_type, north_config.config_type AS config_type, north_config.template_id AS template_id, north_config.remark AS remark 
+FROM north_config 
+WHERE 1 = 1 ORDER BY north_config.id) AS anon_1]
+[parameters: ('*',)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-05-11 15:36:46.105 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:36:46.111 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:36:52.341 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 15:36:52.347 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 15:39:11.743 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 15:39:11.878 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 15:39:12.510 | INFO     | module_device.controller.device_controller:get_device_list:33 - 获取成功
+2026-05-11 15:55:00.025 | ERROR    | exceptions.handle:exception_handler:70 - Invalid isoformat string: ''
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x7f8f4ec280>
+    └ <module 'uvicorn' from '/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/__init__.py'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x7f8f4c3430>
+    └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f8f4c34c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+           │       └ <function run at 0x7f8fee4700>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f7a56bbc0>
+           │    └ <cyfunction Loop.run_until_complete at 0x7f7a48bf40>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c4c0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c4c0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c4c0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+          └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+> File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f7804d430>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x7f7a185580>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f7804d430>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f7a11c3d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x7f8e126160>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x7f7a11c3d0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f7a11c3d0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f7a11c3d0>>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f7a11c3d0>>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x7f7a11c8b0>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f78066700>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f78066700>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x7f7a893a60>>
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f78066700>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │     └ <function Route.handle at 0x7f8e787ee0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f78066700>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <function request_response.<locals>.app at 0x7f7a89aaf0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f78066700>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x7f7a11cd60>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x7f73704f70>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f73704c10>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7a11c...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x7f73704f70>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x7f7a11cd60>
+                     └ <function get_request_handler.<locals>.app at 0x7f7a89aa60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                          └ <function solve_dependencies at 0x7f8e6c6b80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/dependencies/utils.py", line 628, in solve_dependencies
+    solved = await call(**solved_result.values)
+                   │      │             └ {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwdF9uYW1lIjoiXHU3ODE0XHU1M...
+                   │      └ SolvedDependency(values={'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwd...
+                   └ <bound method LoginService.get_current_user of <class 'module_admin.service.login_service.LoginService'>>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/service/login_service.py", line 233, in get_current_user
+    query_user = await UserDao.get_user_by_id(query_db, user_id=token_data.user_id)
+                       │       │              │                 │          └ 1
+                       │       │              │                 └ TokenData(user_id=1)
+                       │       │              └ <sqlalchemy.orm.session.Session object at 0x7f7a11ca00>
+                       │       └ <classmethod object at 0x7f87dd2670>
+                       └ <class 'module_admin.dao.user_dao.UserDao'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/dao/user_dao.py", line 149, in get_user_by_id
+    (db.execute(select(SysMenu).where(SysMenu.status == '0').distinct())).scalars().all()
+     │  │       │      │              │       └ <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7f87d4e4a0>
+     │  │       │      │              └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       │      └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       └ <function select at 0x7f8c4cde50>
+     │  └ <function Session.execute at 0x7f8c0bcf70>
+     └ <sqlalchemy.orm.session.Session object at 0x7f7a11ca00>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1769, in all
+    return self._allrows()
+           │    └ <function ResultInternal._allrows at 0x7f8c4295e0>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f7367b540>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+           │    └ <function FilterResult._fetchall_impl at 0x7f8c433700>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f7367b540>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           │    └ <member '_real_result' of 'FilterResult' objects>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f7367b540>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+                │    └ <list_iterator object at 0x7f73662d60>
+                └ <sqlalchemy.engine.result.ChunkedIteratorResult object at 0x7f73651840>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+            │      └ <function ResultInternal._raw_all_rows at 0x7f8c429550>
+            └ <sqlalchemy.engine.cursor.CursorResult object at 0x7f7364d940>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+            │                        └ [(1, '系统管理', 0, 991, 'system', None, '', '', 1, 0, 'M', '1', '0', '', 'system', 'admin', '2024-12-14 17:35:41.000000', 'admin...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+            │        │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "lib/sqlalchemy/cyextension/processors.pyx", line 40, in sqlalchemy.cyextension.processors.str_to_datetime
+
+ValueError: Invalid isoformat string: ''
+2026-05-11 15:55:00.269 | INFO     | module_admin.controller.login_controller:logout:134 - 退出成功
+2026-05-11 15:55:02.155 | INFO     | module_admin.controller.login_controller:login:58 - 登录成功
+2026-05-11 15:55:02.275 | ERROR    | exceptions.handle:exception_handler:70 - Invalid isoformat string: ''
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x7f8f4ec280>
+    └ <module 'uvicorn' from '/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/__init__.py'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x7f8f4c3430>
+    └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f8f4c34c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+           │       └ <function run at 0x7f8fee4700>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f7a56bbc0>
+           │    └ <cyfunction Loop.run_until_complete at 0x7f7a48bf40>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a4f0>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a4f0>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a4f0>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+          └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+> File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f7366f280>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x7f7a185580>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f7366f280>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f736855b0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x7f8e126160>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x7f736855b0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f736855b0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f736855b0>>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f736855b0>>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x7f73619700>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734e8ca0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734e8ca0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x7f7a893a60>>
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734e8ca0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │     └ <function Route.handle at 0x7f8e787ee0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734e8ca0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <function request_response.<locals>.app at 0x7f7a89aaf0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734e8ca0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x7f73648580>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x7f734e8f70>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734e8e50>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f7345a...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x7f734e8f70>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x7f73648580>
+                     └ <function get_request_handler.<locals>.app at 0x7f7a89aa60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                          └ <function solve_dependencies at 0x7f8e6c6b80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/dependencies/utils.py", line 628, in solve_dependencies
+    solved = await call(**solved_result.values)
+                   │      │             └ {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwdF9uYW1lIjoiXHU3ODE0XHU1M...
+                   │      └ SolvedDependency(values={'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwd...
+                   └ <bound method LoginService.get_current_user of <class 'module_admin.service.login_service.LoginService'>>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/service/login_service.py", line 233, in get_current_user
+    query_user = await UserDao.get_user_by_id(query_db, user_id=token_data.user_id)
+                       │       │              │                 │          └ 1
+                       │       │              │                 └ TokenData(user_id=1)
+                       │       │              └ <sqlalchemy.orm.session.Session object at 0x7f73461040>
+                       │       └ <classmethod object at 0x7f87dd2670>
+                       └ <class 'module_admin.dao.user_dao.UserDao'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/dao/user_dao.py", line 149, in get_user_by_id
+    (db.execute(select(SysMenu).where(SysMenu.status == '0').distinct())).scalars().all()
+     │  │       │      │              │       └ <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7f87d4e4a0>
+     │  │       │      │              └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       │      └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       └ <function select at 0x7f8c4cde50>
+     │  └ <function Session.execute at 0x7f8c0bcf70>
+     └ <sqlalchemy.orm.session.Session object at 0x7f73461040>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1769, in all
+    return self._allrows()
+           │    └ <function ResultInternal._allrows at 0x7f8c4295e0>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f73435630>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+           │    └ <function FilterResult._fetchall_impl at 0x7f8c433700>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f73435630>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           │    └ <member '_real_result' of 'FilterResult' objects>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f73435630>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+                │    └ <list_iterator object at 0x7f733d7a30>
+                └ <sqlalchemy.engine.result.ChunkedIteratorResult object at 0x7f733d8f40>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+            │      └ <function ResultInternal._raw_all_rows at 0x7f8c429550>
+            └ <sqlalchemy.engine.cursor.CursorResult object at 0x7f7345c280>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+            │                        └ [(1, '系统管理', 0, 991, 'system', None, '', '', 1, 0, 'M', '1', '0', '', 'system', 'admin', '2024-12-14 17:35:41.000000', 'admin...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+            │        │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "lib/sqlalchemy/cyextension/processors.pyx", line 40, in sqlalchemy.cyextension.processors.str_to_datetime
+
+ValueError: Invalid isoformat string: ''
+2026-05-11 15:55:02.426 | INFO     | module_admin.controller.login_controller:logout:134 - 退出成功
+2026-05-11 15:55:18.375 | INFO     | module_admin.controller.login_controller:login:58 - 登录成功
+2026-05-11 15:55:18.489 | ERROR    | exceptions.handle:exception_handler:70 - Invalid isoformat string: ''
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x7f8f4ec280>
+    └ <module 'uvicorn' from '/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/__init__.py'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x7f8f4c3430>
+    └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f8f4c34c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+           │       └ <function run at 0x7f8fee4700>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f7a56bbc0>
+           │    └ <cyfunction Loop.run_until_complete at 0x7f7a48bf40>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7e20>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7e20>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7e20>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+          └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+> File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f73415790>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x7f7a185580>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f73415790>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f73648130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x7f8e126160>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x7f73648130>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f73648130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f73648130>>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f73648130>>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x7f733f7730>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734450d0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734450d0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x7f7a893a60>>
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734450d0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │     └ <function Route.handle at 0x7f8e787ee0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734450d0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <function request_response.<locals>.app at 0x7f7a89aaf0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f734450d0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x7f733f78b0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x7f734454c0>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f73445040>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733d7...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x7f734454c0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x7f733f78b0>
+                     └ <function get_request_handler.<locals>.app at 0x7f7a89aa60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                          └ <function solve_dependencies at 0x7f8e6c6b80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/dependencies/utils.py", line 628, in solve_dependencies
+    solved = await call(**solved_result.values)
+                   │      │             └ {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwdF9uYW1lIjoiXHU3ODE0XHU1M...
+                   │      └ SolvedDependency(values={'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwd...
+                   └ <bound method LoginService.get_current_user of <class 'module_admin.service.login_service.LoginService'>>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/service/login_service.py", line 233, in get_current_user
+    query_user = await UserDao.get_user_by_id(query_db, user_id=token_data.user_id)
+                       │       │              │                 │          └ 1
+                       │       │              │                 └ TokenData(user_id=1)
+                       │       │              └ <sqlalchemy.orm.session.Session object at 0x7f736b13a0>
+                       │       └ <classmethod object at 0x7f87dd2670>
+                       └ <class 'module_admin.dao.user_dao.UserDao'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/dao/user_dao.py", line 149, in get_user_by_id
+    (db.execute(select(SysMenu).where(SysMenu.status == '0').distinct())).scalars().all()
+     │  │       │      │              │       └ <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7f87d4e4a0>
+     │  │       │      │              └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       │      └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       └ <function select at 0x7f8c4cde50>
+     │  └ <function Session.execute at 0x7f8c0bcf70>
+     └ <sqlalchemy.orm.session.Session object at 0x7f736b13a0>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1769, in all
+    return self._allrows()
+           │    └ <function ResultInternal._allrows at 0x7f8c4295e0>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f733ef4f0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+           │    └ <function FilterResult._fetchall_impl at 0x7f8c433700>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f733ef4f0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           │    └ <member '_real_result' of 'FilterResult' objects>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f733ef4f0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+                │    └ <list_iterator object at 0x7f733849a0>
+                └ <sqlalchemy.engine.result.ChunkedIteratorResult object at 0x7f73385c80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+            │      └ <function ResultInternal._raw_all_rows at 0x7f8c429550>
+            └ <sqlalchemy.engine.cursor.CursorResult object at 0x7f733fe4c0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+            │                        └ [(1, '系统管理', 0, 991, 'system', None, '', '', 1, 0, 'M', '1', '0', '', 'system', 'admin', '2024-12-14 17:35:41.000000', 'admin...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+            │        │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "lib/sqlalchemy/cyextension/processors.pyx", line 40, in sqlalchemy.cyextension.processors.str_to_datetime
+
+ValueError: Invalid isoformat string: ''
+2026-05-11 15:55:18.640 | INFO     | module_admin.controller.login_controller:logout:134 - 退出成功
+2026-05-11 15:57:03.420 | INFO     | module_admin.controller.login_controller:login:58 - 登录成功
+2026-05-11 15:57:03.639 | ERROR    | exceptions.handle:exception_handler:70 - Invalid isoformat string: ''
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x7f8f4ec280>
+    └ <module 'uvicorn' from '/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/__init__.py'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x7f8f4c3430>
+    └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f8f4c34c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+           │       └ <function run at 0x7f8fee4700>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f7a56bbc0>
+           │    └ <cyfunction Loop.run_until_complete at 0x7f7a48bf40>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5730>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5730>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5730>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+          └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+> File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f734455e0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x7f7a185580>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f734455e0>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f733a5820>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x7f8e126160>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x7f733a5820>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f733a5820>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f733a5820>>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f733a5820>>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x7f733a5610>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f73445040>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f73445040>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x7f7a893a60>>
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f73445040>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │     └ <function Route.handle at 0x7f8e787ee0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f73445040>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <function request_response.<locals>.app at 0x7f7a89aaf0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f73445040>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x7f733a5850>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x7f733f94c0>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f733f9550>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a5...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x7f733f94c0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x7f733a5850>
+                     └ <function get_request_handler.<locals>.app at 0x7f7a89aa60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                          └ <function solve_dependencies at 0x7f8e6c6b80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/dependencies/utils.py", line 628, in solve_dependencies
+    solved = await call(**solved_result.values)
+                   │      │             └ {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwdF9uYW1lIjoiXHU3ODE0XHU1M...
+                   │      └ SolvedDependency(values={'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwd...
+                   └ <bound method LoginService.get_current_user of <class 'module_admin.service.login_service.LoginService'>>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/service/login_service.py", line 233, in get_current_user
+    query_user = await UserDao.get_user_by_id(query_db, user_id=token_data.user_id)
+                       │       │              │                 │          └ 1
+                       │       │              │                 └ TokenData(user_id=1)
+                       │       │              └ <sqlalchemy.orm.session.Session object at 0x7f73450940>
+                       │       └ <classmethod object at 0x7f87dd2670>
+                       └ <class 'module_admin.dao.user_dao.UserDao'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/dao/user_dao.py", line 149, in get_user_by_id
+    (db.execute(select(SysMenu).where(SysMenu.status == '0').distinct())).scalars().all()
+     │  │       │      │              │       └ <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7f87d4e4a0>
+     │  │       │      │              └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       │      └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       └ <function select at 0x7f8c4cde50>
+     │  └ <function Session.execute at 0x7f8c0bcf70>
+     └ <sqlalchemy.orm.session.Session object at 0x7f73450940>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1769, in all
+    return self._allrows()
+           │    └ <function ResultInternal._allrows at 0x7f8c4295e0>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f733817c0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+           │    └ <function FilterResult._fetchall_impl at 0x7f8c433700>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f733817c0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           │    └ <member '_real_result' of 'FilterResult' objects>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f733817c0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+                │    └ <list_iterator object at 0x7f733f71c0>
+                └ <sqlalchemy.engine.result.ChunkedIteratorResult object at 0x7f733a16c0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+            │      └ <function ResultInternal._raw_all_rows at 0x7f8c429550>
+            └ <sqlalchemy.engine.cursor.CursorResult object at 0x7f7339d2e0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+            │                        └ [(1, '系统管理', 0, 991, 'system', None, '', '', 1, 0, 'M', '1', '0', '', 'system', 'admin', '2024-12-14 17:35:41.000000', 'admin...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+            │        │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "lib/sqlalchemy/cyextension/processors.pyx", line 40, in sqlalchemy.cyextension.processors.str_to_datetime
+
+ValueError: Invalid isoformat string: ''
+2026-05-11 15:57:03.788 | INFO     | module_admin.controller.login_controller:logout:134 - 退出成功
+2026-05-11 15:57:19.199 | INFO     | module_admin.controller.login_controller:login:58 - 登录成功
+2026-05-11 15:57:19.318 | ERROR    | exceptions.handle:exception_handler:70 - Invalid isoformat string: ''
+Traceback (most recent call last):
+
+  File "app.py", line 13, in <module>
+    uvicorn.run(
+    │       └ <function run at 0x7f8f4ec280>
+    └ <module 'uvicorn' from '/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/__init__.py'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/main.py", line 579, in run
+    server.run()
+    │      └ <function Server.run at 0x7f8f4c3430>
+    └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/server.py", line 65, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           │       │   │    │             └ None
+           │       │   │    └ <function Server.serve at 0x7f8f4c34c0>
+           │       │   └ <uvicorn.server.Server object at 0x7f8fda3fd0>
+           │       └ <function run at 0x7f8fee4700>
+           └ <module 'asyncio' from '/usr/lib/python3.8/asyncio/__init__.py'>
+  File "/usr/lib/python3.8/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+           │    │                  └ <coroutine object Server.serve at 0x7f7a56bbc0>
+           │    └ <cyfunction Loop.run_until_complete at 0x7f7a48bf40>
+           └ <uvloop.Loop running=True closed=False debug=False>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 409, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+                   └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+                 │    │   │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4760>>
+                 │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+                 │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+                 │    └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+                 └ <uvicorn.middleware.proxy_headers.ProxyHeadersMiddleware object at 0x7f7a24d130>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+                           │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4760>>
+                           │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+                           └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <bound method RequestResponseCycle.send of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4760>>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+          └ <fastapi.applications.FastAPI object at 0x7f8ff030d0>
+> File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+          │    │   │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f733f9b80>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.gzip.GZipMiddleware object at 0x7f7a185580>
+          └ <starlette.middleware.errors.ServerErrorMiddleware object at 0x7f7a1855e0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 20, in __call__
+    await responder(scope, receive, send)
+          │         │      │        └ <function ServerErrorMiddleware.__call__.<locals>._send at 0x7f733f9b80>
+          │         │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │         └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f733a4790>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/gzip.py", line 39, in __call__
+    await self.app(scope, receive, self.send_with_gzip)
+          │    │   │      │        │    └ <function GZipResponder.send_with_gzip at 0x7f8e126160>
+          │    │   │      │        └ <starlette.middleware.gzip.GZipResponder object at 0x7f733a4790>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+          └ <starlette.middleware.gzip.GZipResponder object at 0x7f733a4790>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f733a4790>>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x7f7a185550>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ <bound method GZipResponder.send_with_gzip of <starlette.middleware.gzip.GZipResponder object at 0x7f733a4790>>
+          │                            │    │    │     │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x7f733a4b50>
+          │                            │    └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x7f7a1854f0>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f733f9af0>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 715, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f733f9af0>
+          │    │                │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x7f7a893a60>>
+          └ <fastapi.routing.APIRouter object at 0x7f7a893a60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 735, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f733f9af0>
+          │     │      │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │     └ <function Route.handle at 0x7f8e787ee0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f733f9af0>
+          │    │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │    └ <function request_response.<locals>.app at 0x7f7a89aaf0>
+          └ APIRoute(path='/getInfo', name='get_login_user_info', methods=['GET'])
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f733f9af0>
+          │                            │    │        │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x7f733a4c40>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x7f733f9c10>
+          └ <function wrap_app_handling_exceptions at 0x7f8e80daf0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 62, in wrapped_app
+    raise exc
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/_exception_handler.py", line 51, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x7f733f9040>
+          │   │      └ <bound method RequestResponseCycle.receive of <uvicorn.protocols.http.httptools_impl.RequestResponseCycle object at 0x7f733a4...
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 9099), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x7f733f9c10>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/starlette/routing.py", line 73, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x7f733a4c40>
+                     └ <function get_request_handler.<locals>.app at 0x7f7a89aa60>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/routing.py", line 291, in app
+    solved_result = await solve_dependencies(
+                          └ <function solve_dependencies at 0x7f8e6c6b80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/fastapi/dependencies/utils.py", line 628, in solve_dependencies
+    solved = await call(**solved_result.values)
+                   │      │             └ {'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwdF9uYW1lIjoiXHU3ODE0XHU1M...
+                   │      └ SolvedDependency(values={'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSIsInVzZXJfbmFtZSI6ImFkbWluIiwiZGVwd...
+                   └ <bound method LoginService.get_current_user of <class 'module_admin.service.login_service.LoginService'>>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/service/login_service.py", line 233, in get_current_user
+    query_user = await UserDao.get_user_by_id(query_db, user_id=token_data.user_id)
+                       │       │              │                 │          └ 1
+                       │       │              │                 └ TokenData(user_id=1)
+                       │       │              └ <sqlalchemy.orm.session.Session object at 0x7f733a4f40>
+                       │       └ <classmethod object at 0x7f87dd2670>
+                       └ <class 'module_admin.dao.user_dao.UserDao'>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/module_admin/dao/user_dao.py", line 149, in get_user_by_id
+    (db.execute(select(SysMenu).where(SysMenu.status == '0').distinct())).scalars().all()
+     │  │       │      │              │       └ <sqlalchemy.orm.attributes.InstrumentedAttribute object at 0x7f87d4e4a0>
+     │  │       │      │              └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       │      └ <class 'module_admin.entity.do.menu_do.SysMenu'>
+     │  │       └ <function select at 0x7f8c4cde50>
+     │  └ <function Session.execute at 0x7f8c0bcf70>
+     └ <sqlalchemy.orm.session.Session object at 0x7f733a4f40>
+
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1769, in all
+    return self._allrows()
+           │    └ <function ResultInternal._allrows at 0x7f8c4295e0>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f7339b310>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 548, in _allrows
+    rows = self._fetchall_impl()
+           │    └ <function FilterResult._fetchall_impl at 0x7f8c433700>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f7339b310>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 1676, in _fetchall_impl
+    return self._real_result._fetchall_impl()
+           │    └ <member '_real_result' of 'FilterResult' objects>
+           └ <sqlalchemy.engine.result.ScalarResult object at 0x7f7339b310>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 2270, in _fetchall_impl
+    return list(self.iterator)
+                │    └ <list_iterator object at 0x7f733a5c70>
+                └ <sqlalchemy.engine.result.ChunkedIteratorResult object at 0x7f73392f80>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 219, in chunks
+    fetch = cursor._raw_all_rows()
+            │      └ <function ResultInternal._raw_all_rows at 0x7f8c429550>
+            └ <sqlalchemy.engine.cursor.CursorResult object at 0x7f733fe0a0>
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in _raw_all_rows
+    return [make_row(row) for row in rows]
+            │                        └ [(1, '系统管理', 0, 991, 'system', None, '', '', 1, 0, 'M', '1', '0', '', 'system', 'admin', '2024-12-14 17:35:41.000000', 'admin...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "/opt/bbms/web_source/web_backend/web-backend/.venv-lnx/lib/python3.8/site-packages/sqlalchemy/engine/result.py", line 541, in <listcomp>
+    return [make_row(row) for row in rows]
+            │        │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            │        └ (2033, '北向模板', 2012, 4, 'north-template', 'template/north/index', '', '', 1, 0, 'C', '0', '0', 'template:north:list', '#', 'a...
+            └ functools.partial(<class 'sqlalchemy.engine.row.Row'>, <sqlalchemy.engine.cursor.CursorResultMetaData object at 0x7f78051f90>...
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 22, in sqlalchemy.cyextension.resultproxy.BaseRow.__init__
+  File "lib/sqlalchemy/cyextension/resultproxy.pyx", line 79, in sqlalchemy.cyextension.resultproxy._apply_processors
+  File "lib/sqlalchemy/cyextension/processors.pyx", line 40, in sqlalchemy.cyextension.processors.str_to_datetime
+
+ValueError: Invalid isoformat string: ''
+2026-05-11 15:57:19.466 | INFO     | module_admin.controller.login_controller:logout:134 - 退出成功
+2026-05-11 15:58:56.826 | INFO     | module_admin.controller.login_controller:login:58 - 登录成功
+2026-05-11 15:58:56.949 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 15:58:57.082 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 15:58:58.557 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 15:59:04.727 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 15:59:04.782 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 15:59:07.220 | INFO     | module_device.controller.device_controller:get_device_list:33 - 获取成功
+2026-05-11 15:59:11.209 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 16:08:36.750 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 16:08:36.756 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 16:08:48.758 | INFO     | server:lifespan:36 - SCU-FastAPI Starting...
+2026-05-11 16:08:48.765 | INFO     | server:lifespan:40 - SCU-FastAPI Started successfully
+2026-05-11 16:31:13.239 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 16:31:13.361 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 16:31:17.465 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:31:22.813 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 16:31:22.925 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 16:31:23.422 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:31:24.958 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:31:25.049 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:31:27.046 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:31:28.361 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:31:28.448 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:31:30.402 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 16:31:34.982 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:37:12.698 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 16:37:12.833 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 16:37:14.027 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:37:59.991 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 16:38:00.114 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 16:38:00.629 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:38:08.743 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:38:08.833 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:38:11.300 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 16:38:11.420 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 16:38:11.931 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:38:11.998 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:38:14.278 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:38:18.132 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:38:18.194 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:38:19.549 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 16:41:00.346 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:43:30.592 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 16:43:30.714 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 16:43:32.043 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 16:43:34.342 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:43:39.588 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:43:39.689 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:43:50.851 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:43:52.511 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:43:52.583 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:43:55.193 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 16:43:57.308 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:43:58.905 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:43:58.979 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:44:06.619 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:44:06.705 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:44:26.212 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:44:27.823 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:44:27.922 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:44:29.281 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 16:44:31.981 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:44:32.110 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:44:46.314 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:44:48.362 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:44:48.434 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:44:50.753 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 16:44:51.271 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:44:51.357 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:45:08.148 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:47:56.738 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:47:56.813 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:48:09.139 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:48:11.666 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 16:49:09.611 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:49:09.699 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:52:51.409 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-11 16:52:51.521 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-11 16:52:52.712 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:52:52.769 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:53:04.158 | INFO     | module_device.controller.device_controller:get_device_list:34 - 获取成功
+2026-05-11 16:53:05.707 | INFO     | module_device.controller.template_controller:get_template_list:38 - 获取成功
+2026-05-11 16:53:12.746 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:53:12.835 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:55:40.503 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:55:40.555 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:56:25.867 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:56:27.022 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 16:56:27.127 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 17:00:54.595 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-11 17:00:54.696 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 08:55:51.245 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 08:55:51.325 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:02:20.294 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 09:02:20.468 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 09:02:21.609 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:02:21.663 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:07:22.150 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:07:22.222 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:08:24.109 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:08:24.192 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:08:56.295 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 09:08:56.478 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 09:08:57.865 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:08:57.957 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:12:37.323 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:12:37.353 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:12:37.972 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:12:38.043 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:17:21.109 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:17:21.212 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:18:03.693 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:18:06.477 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:25:33.776 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:25:34.378 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:26:14.380 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:27:16.892 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:32:28.976 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 09:32:42.961 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 09:32:44.285 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:36:34.678 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 09:36:34.807 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 09:36:35.806 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:37:51.963 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:38:21.274 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 09:38:35.392 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 09:38:36.822 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:43:52.661 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 09:43:53.213 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 09:43:54.941 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:43:57.187 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:48:39.270 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 09:48:39.404 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 09:48:41.055 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:48:52.582 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 09:48:52.701 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 09:48:52.975 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:49:38.344 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 09:49:38.456 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 09:49:39.748 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:50:30.601 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:50:31.799 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:58:26.925 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:58:42.710 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:58:56.381 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:59:11.476 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 09:59:11.874 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:01:16.413 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 10:01:16.580 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 10:01:18.222 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:06:13.735 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 10:06:13.910 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 10:06:14.201 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:09:30.662 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:10:03.395 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功
+2026-05-12 10:11:04.632 | INFO     | module_admin.controller.login_controller:get_login_user_info:71 - 获取成功
+2026-05-12 10:11:04.923 | INFO     | module_admin.controller.login_controller:get_login_user_routers:83 - 获取成功
+2026-05-12 10:11:06.917 | INFO     | module_device.controller.topology_controller:get_topology_list:20 - 获取拓扑结构列表成功

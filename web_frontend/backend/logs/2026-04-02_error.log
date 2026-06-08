@@ -1,0 +1,17 @@
+2026-04-02 14:13:49.607 | INFO     | server:lifespan:35 - SCU-FastAPI Starting...
+2026-04-02 14:13:49.646 | INFO     | module_device.service.scu_version_service:init_web_version:30 - SCU version initialization succeeded
+2026-04-02 14:13:49.646 | INFO     | server:lifespan:39 - SCU-FastAPI Started successfully
+2026-04-02 14:14:01.257 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-02 14:14:03.037 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-02 14:15:18.368 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-02 14:15:18.411 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-02 14:19:43.482 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-02 14:19:43.600 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-02 14:35:13.110 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-02 14:35:13.196 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-02 14:35:16.763 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-02 14:35:16.793 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-02 14:36:58.561 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-02 14:36:58.609 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
+2026-04-02 14:37:02.915 | INFO     | module_admin.controller.login_controller:get_login_user_info:66 - 获取成功
+2026-04-02 14:37:02.944 | INFO     | module_admin.controller.login_controller:get_login_user_routers:78 - 获取成功
