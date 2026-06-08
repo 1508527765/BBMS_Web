@@ -1,0 +1,2 @@
+-- 已废弃：请改用 migrate_align_web_to_c_enum.sql
+-- 本文件保留仅供历史参考

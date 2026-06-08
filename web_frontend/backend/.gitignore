@@ -1,0 +1,12 @@
+venv/
+.venv/
+.venv-lnx/
+**/__pycache__/
+*.pyc
+.DS_Store
+web.db
+business.db
+sqlite3.db
+.env.dev
+.env.dev.bak
+.env.prod
