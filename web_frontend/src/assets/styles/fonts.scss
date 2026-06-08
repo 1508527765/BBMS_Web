@@ -1,0 +1,51 @@
+// 阿里巴巴字体定义
+// 中文字体 - 阿里巴巴普惠体
+@font-face {
+  font-family: 'AlibabaPuHuiTi';
+  src: url('../fonts/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.woff2') format('woff2'), /* 现代浏览器优先，压缩最好 */
+       url('../fonts/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.woff') format('woff'), /* 广泛支持的后备 */
+       url('../fonts/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.ttf') format('truetype'); /* 最后的后备 */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* 优化字体加载 */
+}
+
+// 英文字体 - 阿里巴巴Sans
+@font-face {
+  font-family: 'AlibabaSans';
+  src: url('../fonts/AlibabaSans-Regular/AlibabaSans-Regular.woff2') format('woff2'), /* 现代浏览器优先，压缩最好 */
+       url('../fonts/AlibabaSans-Regular/AlibabaSans-Regular.woff') format('woff'), /* 广泛支持的后备 */
+       url('../fonts/AlibabaSans-Regular/AlibabaSans-Regular.ttf') format('truetype'); /* 最后的后备 */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* 优化字体加载 */
+}
+
+// D-DIN 字体定义 - 用于首页数值显示
+// 1. 定义粗体 (Bold)
+@font-face {
+  font-family: 'D-DIN';
+  src: url('../fonts/D-Din/D-DIN-Bold.ttf') format('truetype');
+  font-weight: 700; /* 设置为 bold */
+  font-style: normal;
+  font-display: swap;
+}
+
+// 2. 定义常规体 (Regular)
+@font-face {
+  font-family: 'D-DIN';
+  src: url('../fonts/D-Din/D-DIN.ttf') format('truetype');
+  font-weight: 400; /* 设置为 normal */
+  font-style: normal;
+  font-display: swap;
+}
+
+// 3. 定义一个工具类，方便随时调用
+.font-din {
+  font-family: 'D-DIN', sans-serif;
+  /* 开启等宽数字，防止数字跳动 (关键!) */
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 1px; /* DIN字体通常挤得比较紧，稍微加点间距更好看 */
+}
+

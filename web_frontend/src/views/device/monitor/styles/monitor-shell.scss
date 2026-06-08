@@ -1,0 +1,55 @@
+.background {
+  background-color: #f7f7f7;
+  padding: 20px 10px 20px 20px;
+  min-height: calc(100vh - 80px);
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.layout-row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.layout-row .left {
+  flex: 0 0 280px;
+  max-width: 280px;
+}
+
+.layout-row .right {
+  flex: 1;
+  min-width: 0;
+  overflow-y: visible;
+}
+
+.monitor-detail-pane {
+  min-height: 400px;
+}
+
+.device-sidebar {
+  padding: 12px 8px;
+}
+
+.tree-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 12px;
+  padding: 0 8px;
+}
+
+.device-sidebar.card.left {
+  background: #fff;
+}
+
+.card {
+  border: 1px solid #eaf0f7;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  border-radius: 12px;
+}
+
+.no-data {
+  text-align: center;
+  color: #94a3b8;
+  padding: 48px 16px;
+}

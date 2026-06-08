@@ -1,0 +1,264 @@
+.rbms-cluster-console {
+  --rbms-page: #fafbfc;
+  --rbms-card: #ffffff;
+  --rbms-line: #e8ecf1;
+  --rbms-text: #1e293b;
+  --rbms-muted: #64748b;
+  --rbms-accent: #7c3aed;
+  background: var(--rbms-page);
+  border: 1px solid var(--rbms-line);
+  border-radius: 10px;
+  padding: 14px 16px 18px;
+  color: var(--rbms-text);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+  border-left: 4px solid var(--rbms-accent);
+}
+
+.rbms-cluster-masthead {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px dashed var(--rbms-line);
+}
+
+.rbms-cluster-tier {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rbms-accent);
+  background: rgba(124, 58, 237, 0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.rbms-cluster-title {
+  margin: 8px 0 4px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.rbms-cluster-sub {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--rbms-muted);
+}
+
+.rbms-cluster-idline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--rbms-muted);
+}
+
+.rbms-cluster-dot {
+  opacity: 0.45;
+}
+
+.rbms-cluster-parent {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #475569;
+  padding: 4px 8px;
+  background: #f1f5f9;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.rbms-cluster-count {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--rbms-muted);
+}
+
+.rbms-cluster-kpi-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rbms-cluster-kpi {
+  flex: 1 1 100px;
+  min-width: 88px;
+  max-width: 140px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--rbms-line);
+  background: var(--rbms-card);
+}
+
+.rbms-cluster-kpi-label {
+  display: block;
+  font-size: 11px;
+  color: var(--rbms-muted);
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rbms-cluster-kpi-value {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.rbms-cluster-kpi--teal { border-top: 2px solid #14b8a6; }
+.rbms-cluster-kpi--violet { border-top: 2px solid #8b5cf6; }
+.rbms-cluster-kpi--amber { border-top: 2px solid #f59e0b; }
+.rbms-cluster-kpi--emerald { border-top: 2px solid #10b981; }
+.rbms-cluster-kpi--sky { border-top: 2px solid #0ea5e9; }
+.rbms-cluster-kpi--orange { border-top: 2px solid #f97316; }
+.rbms-cluster-kpi--cyan { border-top: 2px solid #06b6d4; }
+.rbms-cluster-kpi--indigo { border-top: 2px solid #6366f1; }
+
+.rbms-cluster-kpi-empty {
+  font-size: 12px;
+  color: var(--rbms-muted);
+  margin-bottom: 12px;
+  padding: 8px 10px;
+  background: #f8fafc;
+  border-radius: 6px;
+}
+
+.rbms-cluster-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rbms-cluster-search {
+  width: 220px;
+  max-width: 100%;
+}
+
+.rbms-cluster-tabs >>> .el-tabs__header {
+  margin-bottom: 12px;
+}
+
+.rbms-cluster-tabs >>> .el-tabs__item {
+  font-size: 13px;
+  height: 34px;
+  line-height: 34px;
+}
+
+.rbms-tab-hint {
+  font-size: 12px;
+  color: var(--rbms-muted);
+  margin: 0 0 10px;
+}
+
+.rbms-tab-section {
+  margin-bottom: 14px;
+}
+
+.rbms-tab-section-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.rbms-tab-section-head h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.rbms-tab-section-count {
+  font-size: 11px;
+  color: var(--rbms-muted);
+  background: #f1f5f9;
+  padding: 1px 6px;
+  border-radius: 10px;
+}
+
+.rbms-tab-section-hint {
+  font-size: 11px;
+  color: var(--rbms-muted);
+  margin: 0 0 8px;
+}
+
+.rbms-overview-chip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 6px;
+}
+
+.rbms-overview-chip {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--rbms-line);
+  background: var(--rbms-card);
+  font-size: 12px;
+}
+
+.rbms-overview-chip-label {
+  display: block;
+  color: var(--rbms-muted);
+  font-size: 11px;
+  margin-bottom: 2px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.rbms-overview-chip-value {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.rbms-tab-sections {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+}
+
+.rbms-tab-section-card {
+  grid-column: span 12;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--rbms-line);
+  background: var(--rbms-card);
+}
+
+.rbms-tone-energy { border-left: 3px solid #10b981; }
+.rbms-tone-thermal { border-left: 3px solid #f97316; }
+.rbms-tone-fault { border-left: 3px solid #ef4444; }
+.rbms-tone-cells { border-left: 3px solid #8b5cf6; }
+.rbms-tone-misc { border-left: 3px solid #94a3b8; }
+
+.rbms-section-table {
+  width: 100%;
+}
+
+.rbms-tab-empty {
+  text-align: center;
+  padding: 24px;
+  color: var(--rbms-muted);
+  font-size: 13px;
+}
+
+.rbms-flat-wrap {
+  margin-top: 4px;
+  min-height: 520px;
+}
+
+.rbms-cluster-tabs >>> .rbms-flat-table {
+  width: 100%;
+}
+
+.rbms-cluster-tabs >>> .rbms-flat-table .el-table__body-wrapper {
+  min-height: 120px;
+}
+
+/* 电芯信息 Tab 样式见 styles/rbms-cell-info.scss（RbmsCellInfoPanel.vue 引入） */
+
+/* 堆控（BBMS / deviceType=1）：白底浅色分区 + 语义布局（与深色控制台区分） */
