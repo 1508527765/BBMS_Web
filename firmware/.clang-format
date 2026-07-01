@@ -1,0 +1,36 @@
+# 基于 LLVM 风格
+BasedOnStyle: LLVM
+
+# 缩进设置
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# 大括号风格
+BreakBeforeBraces: Allman  # 大括号换行
+
+# 行长度限制
+ColumnLimit: 100
+# 为 true 时才会把「//」与正文粘在一起的情况改成「// 正文」（clang-format 10 无单独项控制该行内空格）。
+# 为 false 时 SpacesBeforeTrailingComments 仍生效，但只作用在「代码」与「//」之间，不会动「//」后面是否要有空格。
+ReflowComments: false
+
+# 访问修饰符缩进
+AccessModifierOffset: -4
+
+# 命名空间缩进
+NamespaceIndentation: All
+FixNamespaceComments: true
+
+# 单行语句控制
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+
+# 空行控制
+MaxEmptyLinesToKeep: 1
+
+# 代码（或上一 token）与行尾注释「//」之间的最少空格数，不是「//」与注释正文之间的空格。
+SpacesBeforeTrailingComments: 1
+
+# 行尾注释对齐（同一连续代码块中，尽量把 // 对齐到同一列）
+AlignTrailingComments: true

@@ -1,0 +1,13 @@
+# ------------------------------------------------------------------------------
+# 当前环境：clangd 10
+#
+# clangd 10 不会应用本文件的 YAML 配置块（Diagnostics、InlayHints、Index 等
+# 项目级配置从 clangd 11 起才有）。有效配置请使用：
+#   - compile_commands.json（CMake 已开启 CMAKE_EXPORT_COMPILE_COMMANDS）
+#   - 仓库 .vscode/settings.json 中的 clangd.arguments / clangd.fallbackFlags
+#
+# 升级到 clangd 11+ 后，可在此文件补充官方文档所述配置：
+#   https://clangd.llvm.org/config
+# ------------------------------------------------------------------------------
+
+CompileFlags: {}
